@@ -36,12 +36,12 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/Phone_Part_2GO.png",
+        "image": "shopify://shop_images/Untitled_design_2.png",
         "image_2": "shopify://shop_images/i-m-zion-qhnutBbnzOc-unsplash.jpg",
         "image_overlay_opacity": 30,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
-        "show_text_box": false,
+        "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-1",
         "image_behavior": "ambient",
