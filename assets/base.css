@@ -101,13 +101,13 @@ main {
   position: absolute;
   top: 0;
   z-index: -1;
-  display: block !important;
   width: calc(100%);
   padding-inline: 10px;
   height: calc(100vh - 100px);
   background: var(--gray-color);
 }
 .zah-wrapper {
+  display: none;
   padding-inline: var(--body-line-padding);
   position: relative;
   z-index: 0;
