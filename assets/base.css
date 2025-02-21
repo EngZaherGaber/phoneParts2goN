@@ -83,7 +83,7 @@
 main {
   position: relative;
 }
-.zah-wrapper-2 {
+/* .zah-wrapper-2 {
   position: sticky;
   z-index: 0;
   border-right: 5px solid black;
@@ -100,7 +100,7 @@ main {
   left: 0;
   height: 100%;
   border-left: black; */
-}
+} */
 /* .zah-wrapper::before {
   content: "";
   position: fixed;
