@@ -104,6 +104,11 @@ main {
 .zah-overlay {
   background: var(--gray-color-tr) !important;
 }
+@media (max-width: 749px) {
+  .zah-overlay {
+    top: 100px;
+  }
+}
 .zah-wrapper {
   /* display: none; */
   /* padding-inline: var(--body-line-padding); */
