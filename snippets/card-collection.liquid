@@ -12,11 +12,11 @@
   Usage:
   {% render 'card-collection' %}
 {% endcomment %}
-<style>
+{% style %}
   .card__inner:after {
     box-shadow: none;
   }
-</style>
+{% endstyle %}
 {%- liquid
   assign ratio = 1
   if card_collection.featured_image and media_aspect_ratio == 'portrait'
