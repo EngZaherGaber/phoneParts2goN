@@ -110,7 +110,7 @@ main {
   background: var(--gray-color);
 }
 .zah-wrapper {
-  display: none;
+  /* display: none; */
   padding-inline: var(--body-line-padding);
   position: relative;
   z-index: 0;
