@@ -102,7 +102,7 @@ main {
   height: 100%;
 }
 .zah-overlay {
-  background: var(--gray-color-tr);
+  background: var(--gray-color-tr) !important;
 }
 .zah-wrapper {
   /* display: none; */
