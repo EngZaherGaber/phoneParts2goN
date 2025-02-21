@@ -76,9 +76,22 @@
 }
 
 /* base */
-.zah-wrapper {
+main {
   padding-inline: var(--body-line-padding);
-  background-color: black;
+}
+.zah-wrapper::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  height: 100%;
+  border-left: black;
+}
+.zah-wrapper::before {
+  content: "";
+  position: fixed;
+  right: 0;
+  height: 100%;
+  border-right: black;
 }
 .page-width {
   max-width: var(--page-width);
