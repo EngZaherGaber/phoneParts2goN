@@ -97,6 +97,8 @@ main {
   position: absolute;
   top: 0;
   overflow-y: hidden;
+  width: 100%;
+  height: 100%;
 }
 .zah-wrapper-2 {
   position: absolute;
