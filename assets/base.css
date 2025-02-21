@@ -115,7 +115,7 @@ main {
   position: relative;
   z-index: 0;
   overflow-y: auto;
-  max-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
 }
 .box-sh {
   box-shadow: inset 0px 15px 90px var(--gray-color);
