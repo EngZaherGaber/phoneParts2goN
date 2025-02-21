@@ -117,7 +117,9 @@ main {
   overflow-y: auto;
   max-height: calc(100vh - 100px);
 }
-
+.box-sh {
+  box-shadow: inset 0px 15px 90px var(--gray-color);
+}
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
