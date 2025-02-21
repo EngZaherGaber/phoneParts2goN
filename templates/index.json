@@ -53,29 +53,15 @@
     "collection_list_xUriNP": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_PPnqRh": {
+        "featured_collection_WN7WNQ": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_WekQJ9": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_ErimVH": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
+            "collection": "screens"
           }
         }
       },
       "block_order": [
-        "featured_collection_PPnqRh",
-        "featured_collection_WekQJ9",
-        "featured_collection_ErimVH"
+        "featured_collection_WN7WNQ"
       ],
       "settings": {
         "title": "Kollektionen",
