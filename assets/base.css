@@ -106,7 +106,7 @@ main {
   z-index: -1;
   width: calc(100%);
   padding-inline: 10px;
-  height: calc(100vh - 100px);
+  height: 100vh;
   background: var(--gray-color);
 }
 .zah-wrapper {
@@ -115,7 +115,7 @@ main {
   position: relative;
   z-index: 0;
   overflow-y: auto;
-  height: calc(100vh - 100px);
+  height: 100vh;
 }
 .box-sh {
   background: linear-gradient(
