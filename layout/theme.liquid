@@ -309,10 +309,8 @@
 
     {% sections 'header-group' %}
 
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      <div class="zah-wrapper">
-        {{ content_for_layout }}
-      </div>
+    <main id="MainContent" class="content-for-layout focus-none zah-wrapper" role="main" tabindex="-1">
+      {{ content_for_layout }}
     </main>
 
     {% sections 'footer-group' %}
