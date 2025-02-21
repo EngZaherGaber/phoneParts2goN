@@ -118,7 +118,12 @@ main {
   height: calc(100vh - 100px);
 }
 .box-sh {
-  box-shadow: inset 0px 15px 90px var(--dark-color);
+  background: linear-gradient(
+    180deg,
+    #4d4d4dcc,
+    #6b6b6b64 52.08%,
+    #85858500
+  ) !important;
 }
 .page-width {
   max-width: var(--page-width);
