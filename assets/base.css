@@ -76,7 +76,7 @@
 }
 
 /* base */
-body main .zah-wrapper {
+.zah-wrapper {
   padding-inline: var(--body-line-padding);
   background-color: black;
 }
