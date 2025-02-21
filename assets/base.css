@@ -8,6 +8,7 @@
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
   --gray-color: #f3f3f3;
+  --gray-color-tr: #f3f3f38f;
   --dark-color: #251d50;
   --purple-color: #8c8cb4;
   --green-color: #16c193;
@@ -100,14 +101,8 @@ main {
   width: 100%;
   height: 100%;
 }
-.zah-wrapper-2 {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  width: calc(100%);
-  padding-inline: 10px;
-  height: 100vh;
-  background: var(--gray-color);
+.zah-overlay {
+  background: var(--gray-color-tr);
 }
 .zah-wrapper {
   /* display: none; */
