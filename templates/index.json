@@ -62,10 +62,16 @@
         "featured_collection_efD6md": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "oppo"
           }
         },
         "featured_collection_H9FBbX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "xiaomi"
+          }
+        },
+        "featured_collection_tEYJgG": {
           "type": "featured_collection",
           "settings": {
             "collection": ""
@@ -82,13 +88,14 @@
         "featured_collection_WN7WNQ",
         "featured_collection_efD6md",
         "featured_collection_H9FBbX",
+        "featured_collection_tEYJgG",
         "featured_collection_fWdicN"
       ],
       "settings": {
-        "title": "Kollektionen",
+        "title": "",
         "heading_size": "h2",
         "image_ratio": "square",
-        "columns_desktop": 3,
+        "columns_desktop": 5,
         "color_scheme": "scheme-1",
         "show_view_all": true,
         "columns_mobile": "1",
