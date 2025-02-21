@@ -94,7 +94,8 @@ body {
   overflow-y: hidden;
 }
 main {
-  position: relative;
+  position: absolute;
+  top: 0;
   overflow-y: hidden;
 }
 .zah-wrapper-2 {
