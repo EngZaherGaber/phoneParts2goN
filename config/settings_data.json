@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/WhatsApp_Image_2025-02-19_at_19.10.08_d9f7a85d-removebg-preview_1_67e2fe18-5b6b-4bfd-97b6-99d9573d4732.webp",
+    "logo": "shopify://shop_images/Handy_Ersatzteile_1800_x_1000_px_-3.svg",
     "logo_width": 120,
     "favicon": "shopify://shop_images/Flyer_2GO.svg",
     "type_header_font": "archivo_n4",
@@ -204,7 +204,7 @@
         "settings": {
           "background": "rgba(0,0,0,0)",
           "background_gradient": "",
-          "text": "#251d50",
+          "text": "#ffffff",
           "button": "#f3f3f3",
           "button_label": "#8c8cb4",
           "secondary_button_label": "#f3f3f3",
