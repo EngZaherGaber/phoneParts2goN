@@ -76,7 +76,17 @@
 }
 
 /* base */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Enable scrolling */
 body {
+}
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll; /* Ensure scrolling is enabled */
   overflow-y: hidden;
 }
 main {
@@ -86,7 +96,7 @@ main {
 
 .zah-wrapper {
   padding-inline: var(--body-line-padding);
-  position: absolute;
+  /* position: absolute; */
   z-index: 0;
   overflow-y: auto;
   max-height: calc(100vh - 100px);
