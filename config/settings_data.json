@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo": "shopify://shop_images/WhatsApp_Image_2025-02-19_at_19.10.08_d9f7a85d-removebg-preview_1_67e2fe18-5b6b-4bfd-97b6-99d9573d4732.webp",
@@ -8,7 +17,6 @@
     "type_body_font": "archivo_n4",
     "body_scale": 100,
     "page_width": 1200,
-    "body_line-padding": 5,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -120,14 +128,19 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-3",
+    "body_line-padding": 5,
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
-        "settings": { "color_scheme": "scheme-1" }
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
       },
       "main-password-footer": {
         "type": "main-password-footer",
-        "settings": { "color_scheme": "scheme-1" }
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
       }
     },
     "content_for_index": [],
@@ -185,6 +198,17 @@
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
+        }
+      },
+      "scheme-98df3f18-e4b5-4c47-8ec7-c9774e1f046a": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "",
+          "text": "#f3f3f3",
+          "button": "#f3f3f3",
+          "button_label": "#8c8cb4",
+          "secondary_button_label": "#f3f3f3",
+          "shadow": "#f3f3f3"
         }
       }
     }
@@ -368,14 +392,20 @@
       "sections": {
         "main-password-header": {
           "type": "main-password-header",
-          "settings": { "color_scheme": "scheme-1" }
+          "settings": {
+            "color_scheme": "scheme-1"
+          }
         },
         "main-password-footer": {
           "type": "main-password-footer",
-          "settings": { "color_scheme": "scheme-1" }
+          "settings": {
+            "color_scheme": "scheme-1"
+          }
         }
       }
     }
   },
-  "platform_customizations": { "custom_css": [] }
+  "platform_customizations": {
+    "custom_css": []
+  }
 }
