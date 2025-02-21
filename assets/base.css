@@ -118,10 +118,10 @@ main {
   height: 100vh;
 }
 .box-sh {
-  background: linear-gradient(
+  background: llinear-gradient(
     180deg,
-    #4d4d4d69,
-    #8d8d8d7a 1.08%,
+    #4d4d4d,
+    #8d8d8d7a 52.08%,
     #85858500
   ) !important;
 }
@@ -2610,7 +2610,7 @@ input[type="checkbox"] {
 }
 
 .header__icon {
-  color: rgb(var(--color-foreground));
+  color: white;
 }
 
 .header__icon span {
