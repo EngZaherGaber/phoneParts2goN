@@ -15,8 +15,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "hxl"
+            "heading": "Top-Qualität zum besten Preis.",
+            "heading_size": "h1"
           }
         },
         "button": {
@@ -47,7 +47,7 @@
         "image_behavior": "ambient",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "collection_list_xUriNP": {
