@@ -76,38 +76,22 @@
 }
 
 /* base */
-/* body {
-    display: flex;
-    flex-direction: column;
-  } */
+body {
+  overflow-y: hidden;
+}
 main {
   position: relative;
+  overflow-y: hidden;
 }
-/* .zah-wrapper-2 {
-  position: sticky;
-  z-index: 0;
-  border-right: 5px solid black;
-  height: 100%;
-  width: 100%;
-  padding-inline: var(--body-line-padding) / 2;
-}
+
 .zah-wrapper {
   padding-inline: var(--body-line-padding);
   position: absolute;
   z-index: 0;
-  /* content: "";
-  position: fixed;
-  left: 0;
-  height: 100%;
-  border-left: black; */
-} */
-/* .zah-wrapper::before {
-  content: "";
-  position: fixed;
-  right: 0;
-  height: 100%;
-  border-right: black;
-} */
+  overflow-y: auto;
+  max-height: calc(100vh - 100px);
+}
+
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
