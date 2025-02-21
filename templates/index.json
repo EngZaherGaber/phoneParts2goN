@@ -1,1 +1,214 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Browse our latest products","heading_size":"hxl"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop all","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading","button"],"settings":{"image":"shopify:\/\/shop_images\/Phone_Part_2GO.png","image_2":"shopify:\/\/shop_images\/i-m-zion-qhnutBbnzOc-unsplash.jpg","image_overlay_opacity":30,"image_height":"medium","desktop_content_position":"middle-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"scheme-4","image_behavior":"ambient","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"collection_list_xUriNP":{"type":"collection-list","blocks":{"featured_collection_PPnqRh":{"type":"featured_collection","settings":{"collection":""}},"featured_collection_WekQJ9":{"type":"featured_collection","settings":{"collection":""}},"featured_collection_ErimVH":{"type":"featured_collection","settings":{"collection":""}}},"block_order":["featured_collection_PPnqRh","featured_collection_WekQJ9","featured_collection_ErimVH"],"settings":{"title":"Kollektionen","heading_size":"h2","image_ratio":"square","columns_desktop":3,"color_scheme":"scheme-1","show_view_all":false,"columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}},"image_with_text_C4bW3Y":{"type":"image-with-text","blocks":{"heading_7gHamN":{"type":"heading","settings":{"heading":"Bild mit Text","heading_size":"h1"}},"text_iwrgyx":{"type":"text","settings":{"text":"<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.<\/p>","text_style":"body"}},"button_dHKVxw":{"type":"button","settings":{"button_label":"Schaltflächenbeschriftung","button_link":"","button_style_secondary":false}}},"block_order":["heading_7gHamN","text_iwrgyx","button_dHKVxw"],"settings":{"height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","section_color_scheme":"","color_scheme":"","image_behavior":"none","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"featured_collection":{"type":"featured-collection","settings":{"title":"Featured products","heading_size":"h2","description":"","show_description":true,"description_style":"body","collection":"all","products_to_show":8,"columns_desktop":4,"full_width":true,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":true,"show_rating":true,"quick_add":"bulk","columns_mobile":"2","swipe_on_mobile":true,"padding_top":44,"padding_bottom":36}},"collage_fMfYXy":{"type":"collage","blocks":{"image_XBQXCY":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/A00003137_C.jpg"}},"product_QxDa7y":{"type":"product","settings":{"product":"alcatel-1s-display-and-digitizer-black","second_image":true}},"collection_KDJTKz":{"type":"collection","settings":{"collection":""}}},"block_order":["image_XBQXCY","product_QxDa7y","collection_KDJTKz"],"settings":{"heading":"Multimedia-Collage","heading_size":"h2","desktop_layout":"left","mobile_layout":"column","card_styles":"product-card-wrapper","color_scheme":"","padding_top":36,"padding_bottom":36}}},"order":["image_banner","collection_list_xUriNP","image_with_text_C4bW3Y","featured_collection","collage_fMfYXy"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "hxl"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Phone_Part_2GO.png",
+        "image_2": "shopify://shop_images/i-m-zion-qhnutBbnzOc-unsplash.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "collection_list_xUriNP": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_PPnqRh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_WekQJ9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_ErimVH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_PPnqRh",
+        "featured_collection_WekQJ9",
+        "featured_collection_ErimVH"
+      ],
+      "settings": {
+        "title": "Kollektionen",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_C4bW3Y": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7gHamN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bild mit Text",
+            "heading_size": "h1"
+          }
+        },
+        "text_iwrgyx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_dHKVxw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7gHamN",
+        "text_iwrgyx",
+        "button_dHKVxw"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "quick_add": "bulk",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "collage_fMfYXy": {
+      "type": "collage",
+      "blocks": {
+        "image_XBQXCY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/A00003137_C.jpg"
+          }
+        },
+        "product_QxDa7y": {
+          "type": "product",
+          "settings": {
+            "product": "alcatel-1s-display-and-digitizer-black",
+            "second_image": true
+          }
+        },
+        "collection_KDJTKz": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_XBQXCY",
+        "product_QxDa7y",
+        "collection_KDJTKz"
+      ],
+      "settings": {
+        "heading": "Multimedia-Collage",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "collection_list_xUriNP",
+    "image_with_text_C4bW3Y",
+    "featured_collection",
+    "collage_fMfYXy"
+  ]
+}
