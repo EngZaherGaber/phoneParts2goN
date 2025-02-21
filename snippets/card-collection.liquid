@@ -1,56 +1,22 @@
 {% comment %}
   Renders a collection card with only the collection image (logo).
-
-  Accepts:
-  - card_collection: {Object} Collection Liquid object
-  - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
-  - placeholder_image: {String} Placeholder image when collection is empty (optional)
-
-  Usage:
-  {% render 'card-collection' %}
+  Ensures the image displays correctly without height issues.
 {% endcomment %}
 
-{%- liquid
-  assign ratio = 1
-  if card_collection.featured_image and media_aspect_ratio == 'portrait'
-    assign ratio = 0.8
-  elsif card_collection.featured_image and media_aspect_ratio == 'adapt'
-    assign ratio = card_collection.featured_image.aspect_ratio
-  endif
-  if ratio == 0 or ratio == null
-    assign ratio = 1
-  endif
--%}
-
 <div class="card-wrapper">
-  <div class="card card--media" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
-    <div class="card__inner" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+  <div class="card card--media">
+    <div class="card__inner">
       {%- if card_collection.featured_image -%}
         <div class="card__media">
           <div class="media media--transparent media--hover-effect">
             <a href="{{ card_collection.url }}">
               <img
-                srcset="
-                  {%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if card_collection.featured_image.width >= 330 -%}{{ card_collection.featured_image | image_url: width: 330 }} 330w,{%- endif -%}
-                  {%- if card_collection.featured_image.width >= 535 -%}{{ card_collection.featured_image | image_url: width: 535 }} 535w,{%- endif -%}
-                  {%- if card_collection.featured_image.width >= 750 -%}{{ card_collection.featured_image | image_url: width: 750 }} 750w,{%- endif -%}
-                  {%- if card_collection.featured_image.width >= 1000 -%}{{ card_collection.featured_image | image_url: width: 1000 }} 1000w,{%- endif -%}
-                  {%- if card_collection.featured_image.width >= 1500 -%}{{ card_collection.featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                  {%- if card_collection.featured_image.width >= 3000 -%}{{ card_collection.featured_image | image_url: width: 3000 }} 3000w,{%- endif -%}
-                  {{ card_collection.featured_image | image_url }} {{ card_collection.featured_image.width }}w
-                "
-                src="{{ card_collection.featured_image | image_url: width: 1500 }}"
-                sizes="
-                  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
-                  (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
-                  calc(100vw - 3rem)
-                "
+                src="{{ card_collection.featured_image | image_url: width: 300 }}"
                 alt="{{ card_collection.featured_image.alt | escape }}"
-                height="{{ card_collection.featured_image.height }}"
-                width="{{ card_collection.featured_image.width }}"
                 loading="lazy"
                 class="motion-reduce"
+                width="300"
+                height="{{ 300 | divided_by: card_collection.featured_image.aspect_ratio | round}}"
               >
             </a>
           </div>
@@ -58,10 +24,35 @@
       {%- else -%}
         <div class="card__media">
           <a href="{{ card_collection.url }}">
-            {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
+            {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
           </a>
         </div>
       {%- endif -%}
     </div>
   </div>
 </div>
+
+<style>
+  .card-wrapper,
+  .card,
+  .card__inner,
+  .card__media,
+  .media {
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .card__media img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+  }
+
+  /* Optional: Add borders for debugging */
+  .card-wrapper,
+  .card,
+  .card__inner,
+  .card__media,
+  .media {
+    border: 1px solid red;
+  }
+</style>
