@@ -204,7 +204,7 @@
         "settings": {
           "background": "rgba(0,0,0,0)",
           "background_gradient": "",
-          "text": "#f3f3f3",
+          "text": "#22f2bc",
           "button": "#f3f3f3",
           "button_label": "#8c8cb4",
           "secondary_button_label": "#f3f3f3",
