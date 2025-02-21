@@ -72,26 +72,12 @@
           >
             {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
             {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
-            <a href="{{ block.settings.collection.url }}" class="card-wrapper">
-              <div class="card card--collection">
-                <div class="card__media">
-                  <div class="media media--transparent media--hover-effect">
-                    {%- if block.settings.collection.featured_image != blank -%}
-                      <img
-                        src="{{ block.settings.collection.featured_image | img_url: '300x' }}"
-                        alt="{{ block.settings.collection.title | escape }}"
-                        width="300"
-                        height="{{ 300 | divided_by: block.settings.collection.featured_image.aspect_ratio | round }}"
-                        loading="lazy"
-                        class="motion-reduce"
-                      >
-                    {%- else -%}
-                      {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
-                    {%- endif -%}
-                  </div>
-                </div>
-              </div>
-            </a>
+            {% render 'card-collection',
+              card_collection: block.settings.collection,
+              media_aspect_ratio: section.settings.image_ratio,
+              columns: columns,
+              placeholder_image: placeholder_image
+            %}
           </li>
         {%- endfor -%}
       </ul>
