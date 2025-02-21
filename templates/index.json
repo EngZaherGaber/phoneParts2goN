@@ -53,10 +53,22 @@
     "collection_list_xUriNP": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_tEYJgG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-apple"
+          }
+        },
         "featured_collection_WN7WNQ": {
           "type": "featured_collection",
           "settings": {
             "collection": "screens"
+          }
+        },
+        "featured_collection_fWdicN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pixdura"
           }
         },
         "featured_collection_efD6md": {
@@ -71,31 +83,26 @@
             "collection": "xiaomi"
           }
         },
-        "featured_collection_tEYJgG": {
+        "featured_collection_Q63HpJ": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_fWdicN": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
+            "collection": "rixus"
           }
         }
       },
       "block_order": [
+        "featured_collection_tEYJgG",
         "featured_collection_WN7WNQ",
+        "featured_collection_fWdicN",
         "featured_collection_efD6md",
         "featured_collection_H9FBbX",
-        "featured_collection_tEYJgG",
-        "featured_collection_fWdicN"
+        "featured_collection_Q63HpJ"
       ],
       "settings": {
         "title": "",
         "heading_size": "h2",
         "image_ratio": "square",
-        "columns_desktop": 5,
+        "columns_desktop": 6,
         "color_scheme": "scheme-1",
         "show_view_all": true,
         "columns_mobile": "1",
