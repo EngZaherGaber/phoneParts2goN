@@ -39,6 +39,7 @@
         "image": "shopify://shop_images/Untitled_design_2.png",
         "image_2": "shopify://shop_images/i-m-zion-qhnutBbnzOc-unsplash.jpg",
         "image_overlay_opacity": 50,
+        "top_spacing_zah": -100,
         "image_height": "medium",
         "desktop_content_position": "bottom-left",
         "show_text_box": true,
