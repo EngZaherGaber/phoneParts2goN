@@ -9,12 +9,73 @@
  */
 {
   "sections": {
+    "collection_list_KGDDwU": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_Fy74gR": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-apple"
+          }
+        },
+        "featured_collection_4gwhfN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "oppo"
+          }
+        },
+        "featured_collection_cqbB4A": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pixdura"
+          }
+        },
+        "featured_collection_UH7m3q": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rixus"
+          }
+        },
+        "featured_collection_cWGrUc": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "screens"
+          }
+        },
+        "featured_collection_BUzPAg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "xiaomi"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_Fy74gR",
+        "featured_collection_4gwhfN",
+        "featured_collection_cqbB4A",
+        "featured_collection_UH7m3q",
+        "featured_collection_cWGrUc",
+        "featured_collection_BUzPAg"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 6,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_collection_description": true,
+        "show_collection_description": false,
         "show_collection_image": false,
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-4"
       }
     },
     "product-grid": {
@@ -34,11 +95,12 @@
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 4
       }
     }
   },
   "order": [
+    "collection_list_KGDDwU",
     "banner",
     "product-grid"
   ]
