@@ -91,16 +91,16 @@ body {
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  overflow-y: scroll; /* Ensure scrolling is enabled */
-  overflow-y: hidden;
+  /* overflow-y: scroll; Ensure scrolling is enabled */
+  /* overflow-y: hidden; */
 }
-main {
-  position: absolute;
+/* main {
+  position: relative;
   top: 0;
   overflow-y: hidden;
   width: 100%;
   height: 100%;
-}
+} */
 .zah-overlay {
   background: var(--gray-color-tr) !important;
 }
@@ -109,14 +109,12 @@ main {
     top: 100px;
   }
 }
-.zah-wrapper {
-  /* display: none; */
-  /* padding-inline: var(--body-line-padding); */
+/* .zah-wrapper {
   position: relative;
   z-index: 0;
   overflow-y: auto;
-  height: 100vh;
-}
+  height: 100vh; */
+/* } */
 .box-sh {
   background: linear-gradient(
     180deg,
