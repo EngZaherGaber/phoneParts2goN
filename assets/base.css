@@ -96,10 +96,6 @@ body {
 }
 main {
   position: relative;
-  /* top: -100px; */
-  /* overflow-y: hidden; */
-  /* width: 100%; */
-  /* height: 100%; */
 }
 .zah-overlay {
   background: var(--gray-color-tr) !important;
