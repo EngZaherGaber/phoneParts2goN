@@ -181,7 +181,7 @@
       "scheme-4": {
         "settings": {
           "background": "#0b0f34",
-          "background_gradient": "",
+          "background_gradient": "linear-gradient(45deg, rgba(37, 29, 80, 1) 28%, rgba(32, 238, 181, 0.5) 58%)",
           "text": "#f3f3f3",
           "button": "#0b0f34",
           "button_label": "#f3f3f3",
