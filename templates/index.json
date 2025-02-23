@@ -38,16 +38,15 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/Untitled_design_2.png",
-        "image_2": "shopify://shop_images/i-m-zion-qhnutBbnzOc-unsplash.jpg",
-        "image_overlay_opacity": 50,
+        "image": "shopify://shop_images/I_need_image_have_this_gradient_linear-gradient_45deg_rgb_11_15_52_27_rgba_32_238_181_0.588_124_and_I_need_to_make_it_to_use_it_in_my_store_site_and_make_grad_smoothly_and_add_in_left_efab6889-de12-41d9-b7fb-626987a990e0.jpg",
+        "image_overlay_opacity": 0,
         "top_spacing_zah": -100,
         "image_height": "large",
         "desktop_content_position": "bottom-left",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-4",
-        "image_behavior": "ambient",
+        "image_behavior": "zoom-in",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
         "show_text_below": false
