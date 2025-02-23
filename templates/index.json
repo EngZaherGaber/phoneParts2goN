@@ -38,7 +38,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/I_need_image_have_this_gradient_linear-gradient_45deg_rgb_11_15_52_27_rgba_32_238_181_0.588_124_and_I_need_to_make_it_to_use_it_in_my_store_site_and_make_grad_smoothly_and_add_in_left_efab6889-de12-41d9-b7fb-626987a990e0.jpg",
+        "image": "shopify://shop_images/I_need_image_have_this_gradient_linear-gradient_45deg_rgb_11_15_52_27_rgba_32_238_181_0.588_124_and_I_need_to_make_it_to_use_it_in_my_store_site_and_make_grad_smoothly_with_ratio_3_2_15d29503-5db6-49a2-86ba-d2879c29c36e.jpg",
         "image_overlay_opacity": 0,
         "top_spacing_zah": -100,
         "image_height": "large",
@@ -46,7 +46,7 @@
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-4",
-        "image_behavior": "zoom-in",
+        "image_behavior": "ambient",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
         "show_text_below": false
