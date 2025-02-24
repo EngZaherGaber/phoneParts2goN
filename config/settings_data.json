@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/WhatsApp_Image_2025-02-19_at_19.10.08_d9f7a85d-removebg-preview_1.webp",
+    "logo": "shopify://shop_images/Handy_Ersatzteile_1800_x_1000_px_-3.svg",
     "logo_width": 120,
     "favicon": "shopify://shop_images/Flyer_2GO.svg",
     "type_header_font": "archivo_n4",
@@ -57,7 +57,7 @@
     "collection_card_style": "standard",
     "collection_card_image_padding": 4,
     "collection_card_text_alignment": "left",
-    "collection_card_color_scheme": "scheme-4",
+    "collection_card_color_scheme": "scheme-98df3f18-e4b5-4c47-8ec7-c9774e1f046a",
     "collection_card_border_thickness": 0,
     "collection_card_border_opacity": 0,
     "collection_card_corner_radius": 16,
@@ -183,9 +183,9 @@
           "background": "#f3f3f3",
           "background_gradient": "linear-gradient(90deg, rgb(139 214 218), rgb(166 236 208))",
           "text": "#121212",
-          "button": "#f3f3f3",
+          "button": "#22f2bc",
           "button_label": "#121212",
-          "secondary_button_label": "#f3f3f3",
+          "secondary_button_label": "#221b4d",
           "shadow": "#f3f3f3"
         }
       },
@@ -202,9 +202,9 @@
       },
       "scheme-98df3f18-e4b5-4c47-8ec7-c9774e1f046a": {
         "settings": {
-          "background": "#221b4d",
+          "background": "rgba(0,0,0,0)",
           "background_gradient": "",
-          "text": "#22f2bc",
+          "text": "#f3f3f3",
           "button": "#251d50",
           "button_label": "#251d50",
           "secondary_button_label": "#f3f3f3",

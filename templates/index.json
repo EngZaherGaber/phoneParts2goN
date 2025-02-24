@@ -153,7 +153,7 @@
         "desktop_content_alignment": "left",
         "content_layout": "overlap",
         "section_color_scheme": "scheme-4",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "image_behavior": "ambient",
         "mobile_content_alignment": "left",
         "padding_top": 36,
