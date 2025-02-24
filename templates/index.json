@@ -113,6 +113,89 @@
         "padding_bottom": 36
       }
     },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-4",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "slideshow_ib7FXV": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_bQnRWD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/I_need_image_have_this_gradient_linear-gradient_45deg_rgb_11_15_52_27_rgba_32_238_181_0.588_124_and_I_need_to_make_it_to_use_it_in_my_store_site_and_make_grad_smoothly_with_ratio_3_2_15d29503-5db6-49a2-86ba-d2879c29c36e.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_kE94YP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/I_need_image_have_this_gradient_linear-gradient_45deg_rgb_11_15_52_27_rgba_32_238_181_0.588_124_and_I_need_to_make_it_to_use_it_in_my_store_site_and_make_grad_smoothly_with_ratio_3_2_5fd12caa-3672-4ed5-b675-eb67f6a06c78.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_bQnRWD",
+        "slide_kE94YP"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "ambient",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow zu deiner Marke"
+      }
+    },
     "image_with_text_C4bW3Y": {
       "type": "image-with-text",
       "blocks": {
@@ -146,7 +229,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Untitled_design_2.png",
-        "height": "large",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
@@ -158,34 +241,6 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": true,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "outline",
-        "enable_desktop_slider": true,
-        "color_scheme": "scheme-4",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": true,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 52
       }
     },
     "collage_fMfYXy": {
@@ -231,8 +286,9 @@
   "order": [
     "image_banner",
     "collection_list_xUriNP",
-    "image_with_text_C4bW3Y",
     "featured_collection",
+    "slideshow_ib7FXV",
+    "image_with_text_C4bW3Y",
     "collage_fMfYXy"
   ]
 }

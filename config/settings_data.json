@@ -183,9 +183,9 @@
           "background": "#f3f3f3",
           "background_gradient": "linear-gradient(90deg, rgb(139 214 218), rgb(166 236 208))",
           "text": "#121212",
-          "button": "#22f2bc",
+          "button": "#f3f3f3",
           "button_label": "#121212",
-          "secondary_button_label": "#221b4d",
+          "secondary_button_label": "#121212",
           "shadow": "#f3f3f3"
         }
       },
