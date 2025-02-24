@@ -105,6 +105,7 @@ body {
   /* overflow-y: scroll; Ensure scrolling is enabled */
   /* overflow-y: hidden; */
 }
+
 main {
   position: relative;
 }
