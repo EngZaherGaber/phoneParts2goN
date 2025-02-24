@@ -38,10 +38,10 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/I_need_image_have_this_gradient_linear-gradient_150deg_rgb_117_178_194_rgb_59_121_121_and_I_need_to_make_it_to_use_it_in_my_store_site_in_shopify_and_make_grad_smoothly_store_deal_wit.jpg",
+        "image": "shopify://shop_images/banner.png",
         "image_overlay_opacity": 0,
         "top_spacing_zah": -100,
-        "image_height": "large",
+        "image_height": "adapt",
         "desktop_content_position": "bottom-left",
         "show_text_box": true,
         "desktop_content_alignment": "center",
