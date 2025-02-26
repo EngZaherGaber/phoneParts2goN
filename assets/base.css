@@ -110,15 +110,21 @@ main {
   position: relative;
 }
 .no-cart {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
+  justify-self: center;
   text-decoration: none;
   padding: 10px 20px;
   color: var(--newDark);
   background-size: 200% 200%; /* Make the gradient larger than the element */
   background-position: 0% 0%;
-  background: linear-gradient(270deg, rgb(166 236 208), rgb(139 214 218));
+  background: linear-gradient(270deg, #3ee9a5, #45d5dc);
   transition: background-position 2s ease;
+}
+.no-cart > .svg-wrapper {
+  height: 4.4rem;
+  width: 4.4rem;
 }
 .no-cart:hover {
   background-position: 100% 100%;
