@@ -169,7 +169,7 @@ main {
 .no-cart > .svg-wrapper {
   display: flex;
   align-items: center;
-  width: 4.4rem;
+  /* width: 4.4rem; */
   height: 4.4rem;
   margin-right: 8px; /* Add spacing between icon and text */
 }
