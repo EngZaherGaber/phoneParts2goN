@@ -442,15 +442,15 @@
                     {%- endif -%}
                   </div>
                 {% else %}
-                  <div>
-                    <a
-                      href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                      class="no-cart"
-                      rel="nofollow"
+                  <a
+                    href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                    class="no-cart"
+                    rel="nofollow"
+                  >
+                    <span class="svg-wrapper">
+                      {{- 'icon-cart-empty.svg' | inline_asset_content }} Login To See Price</span
                     >
-                      Login To See Price
-                    </a>
-                  </div>
+                  </a>
                 {%- endif -%}
               {%- when 'popup' -%}
                 <modal-opener
