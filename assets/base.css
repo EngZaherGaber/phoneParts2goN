@@ -110,24 +110,72 @@ main {
   position: relative;
 }
 .no-cart {
+  display: inline-flex; /* Use inline-flex for better alignment */
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  width: auto; /* Adjust width to fit content */
+  padding: 12px 24px; /* Slightly larger padding for better clickability */
+  font-size: 16px; /* Adjust font size */
+  font-weight: 600; /* Bold text for better readability */
+  color: #fff; /* White text for contrast */
+  text-decoration: none; /* Remove underline */
+  text-transform: uppercase; /* Uppercase text for a professional look */
+  border-radius: 30px; /* Rounded corners */
+  background: linear-gradient(
+    270deg,
+    #3ee9a5,
+    #45d5dc
+  ); /* Gradient background */
+  background-size: 200% 200%; /* Larger background for animation */
+  background-position: 0% 0%; /* Initial background position */
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: relative; /* For pseudo-element effects */
+  overflow: hidden; /* Hide overflow for pseudo-element */
+}
+
+.no-cart:hover {
+  background-position: 100% 100%; /* Animate gradient on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.no-cart:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+/* Add a pseudo-element for a glossy overlay effect */
+.no-cart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0) 50%
+  ); /* Glossy overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.no-cart:hover::after {
+  opacity: 1; /* Show glossy overlay on hover */
+}
+
+/* Style for the SVG icon */
+.svg-wrapper {
   display: flex;
   align-items: center;
-  width: 100%;
-  justify-self: center;
-  text-decoration: none;
-  padding: 10px 20px;
-  color: var(--newDark);
-  background-size: 200% 200%; /* Make the gradient larger than the element */
-  background-position: 0% 0%;
-  background: linear-gradient(270deg, #3ee9a5, #45d5dc);
-  transition: background-position 2s ease;
+  margin-right: 8px; /* Add spacing between icon and text */
 }
-.no-cart > .svg-wrapper {
-  height: 4.4rem;
-  width: 4.4rem;
-}
-.no-cart:hover {
-  background-position: 100% 100%;
+
+.svg-wrapper svg {
+  width: 20px; /* Adjust icon size */
+  height: 20px;
+  fill: #fff; /* White icon for contrast */
 }
 .zah-overlay {
   background: var(--gray-color-tr) !important;
