@@ -150,15 +150,17 @@
       <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </div>
-{% else %}
-  <div>
-    <a
-      href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-      class="no-cart"
-      rel="nofollow"
-    >
-      <span class="svg-wrapper">{{- 'icon-cart-empty.svg' | inline_asset_content }} </span>
-      Login To See Price!
-    </a>
-  </div>
+  {% comment %}
+    {% else %}
+    <div>
+      <a
+        href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+        class="no-cart"
+        rel="nofollow"
+      >
+        <span class="svg-wrapper">{{- 'icon-cart-empty.svg' | inline_asset_content }} </span>
+        Login To See Price!
+      </a>
+    </div>
+  {% endcomment %}
 {%- endif -%}
