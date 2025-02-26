@@ -166,7 +166,7 @@ main {
 }
 
 /* Style for the SVG icon */
-.svg-wrapper {
+.no-cart > .svg-wrapper {
   display: flex;
   align-items: center;
   width: 4.4rem;
