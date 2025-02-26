@@ -109,6 +109,17 @@ body {
 main {
   position: relative;
 }
+.no-cart {
+  width: 100%;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: var(--newDark);
+  background: linear-gradient(270deg, rgb(166 236 208), rgb(139 214 218));
+  transition: 1s background ease;
+}
+.no-cart:hover {
+  background: linear-gradient(270deg, rgb(139 214 218), rgb(166 236 208));
+}
 .zah-overlay {
   background: var(--gray-color-tr) !important;
 }
