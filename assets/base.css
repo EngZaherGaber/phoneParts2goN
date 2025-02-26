@@ -116,7 +116,8 @@ main {
   width: 100%; /* Adjust width to fit content */
   padding: 0px 24px; /* Slightly larger padding for better clickability */
   font-size: 16px; /* Adjust font size */
-  color: #fff !important; /* White text for contrast */
+  color: #fff !important;
+  /* White text for contrast */
   text-decoration: none; /* Remove underline */
   text-transform: uppercase; /* Uppercase text for a professional look */
   border-radius: 20px; /* Rounded corners */
