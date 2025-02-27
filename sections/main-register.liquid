@@ -18,9 +18,13 @@
   <h1>
     {{ 'customer.register.title' | t }}
   </h1>
-  {%- form 'create_customer', novalidate: 'novalidate' -%}
+  {%- form 'create_customer'
+    , novalidate: 'novalidate' -%}
     {%- if form.errors -%}
-      <h2 class="form__message" tabindex="-1" autofocus>
+      <h2
+        class="form__message"
+        tabindex="-1"
+        autofocus>
         <span class="svg-wrapper">
           {{- 'icon-error.svg' | inline_asset_content -}}
         </span>
@@ -41,17 +45,18 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
+
+    <!-- Existing Fields -->
     <div class="field">
       <input
         type="text"
         name="customer[first_name]"
         id="RegisterForm-FirstName"
         {% if form.first_name %}
-          value="{{ form.first_name }}"
+        value="{{ form.first_name }}"
         {% endif %}
         autocomplete="given-name"
-        placeholder="{{ 'customer.register.first_name' | t }}"
-      >
+        placeholder="{{ 'customer.register.first_name' | t }}">
       <label for="RegisterForm-FirstName">
         {{ 'customer.register.first_name' | t }}
       </label>
@@ -62,11 +67,10 @@
         name="customer[last_name]"
         id="RegisterForm-LastName"
         {% if form.last_name %}
-          value="{{ form.last_name }}"
+        value="{{ form.last_name }}"
         {% endif %}
         autocomplete="family-name"
-        placeholder="{{ 'customer.register.last_name' | t }}"
-      >
+        placeholder="{{ 'customer.register.last_name' | t }}">
       <label for="RegisterForm-LastName">
         {{ 'customer.register.last_name' | t }}
       </label>
@@ -77,18 +81,17 @@
         name="customer[email]"
         id="RegisterForm-email"
         {% if form.email %}
-          value="{{ form.email }}"
+        value="{{ form.email }}"
         {% endif %}
         spellcheck="false"
         autocapitalize="off"
         autocomplete="email"
         aria-required="true"
         {% if form.errors contains 'email' %}
-          aria-invalid="true"
-          aria-describedby="RegisterForm-email-error"
+        aria-invalid="true"
+        aria-describedby="RegisterForm-email-error"
         {% endif %}
-        placeholder="{{ 'customer.register.email' | t }}"
-      >
+        placeholder="{{ 'customer.register.email' | t }}">
       <label for="RegisterForm-email">
         {{ 'customer.register.email' | t }}
       </label>
@@ -109,11 +112,10 @@
         id="RegisterForm-password"
         aria-required="true"
         {% if form.errors contains 'password' %}
-          aria-invalid="true"
-          aria-describedby="RegisterForm-password-error"
+        aria-invalid="true"
+        aria-describedby="RegisterForm-password-error"
         {% endif %}
-        placeholder="{{ 'customer.register.password' | t }}"
-      >
+        placeholder="{{ 'customer.register.password' | t }}">
       <label for="RegisterForm-password">
         {{ 'customer.register.password' | t }}
       </label>
@@ -127,6 +129,183 @@
         {{ form.errors.messages.password }}.
       </span>
     {%- endif -%}
+
+    <!-- New Fields -->
+    <div class="field">
+      <input
+        type="text"
+        name="customer[note][Company]"
+        id="RegisterForm-Company"
+        placeholder="Company">
+      <label for="RegisterForm-Company">
+        Company
+      </label>
+    </div>
+    <div class="field">
+      <input
+        type="tel"
+        name="customer[note][Phone]"
+        id="RegisterForm-Phone"
+        placeholder="Phone">
+      <label for="RegisterForm-Phone">
+        Phone
+      </label>
+    </div>
+    <div class="field">
+      <input
+        type="text"
+        name="customer[note][Address1]"
+        id="RegisterForm-Address1"
+        placeholder="Address 1">
+      <label for="RegisterForm-Address1">
+        Address 1
+      </label>
+    </div>
+    <div class="field">
+      <input
+        type="text"
+        name="customer[note][Address2]"
+        id="RegisterForm-Address2"
+        placeholder="Address 2">
+      <label for="RegisterForm-Address2">
+        Address 2
+      </label>
+    </div>
+    <div class="field">
+      <select name="customer[note][Country]" id="RegisterForm-Country">
+        <option value="">Select Country</option>
+      <!-- Add country options here -->
+      </select>
+      <label for="RegisterForm-Country">
+        Country
+      </label>
+    </div>
+    <div class="field">
+      <input
+        type="text"
+        name="customer[note][City]"
+        id="RegisterForm-City"
+        placeholder="City">
+      <label for="RegisterForm-City">
+        City
+      </label>
+    </div>
+    <div class="field">
+      <input
+        type="text"
+        name="customer[note][ZipCode]"
+        id="RegisterForm-ZipCode"
+        placeholder="Zip Code">
+      <label for="RegisterForm-ZipCode">
+        Zip Code
+      </label>
+    </div>
+    <div class="field">
+      <input
+        type="text"
+        name="customer[note][VATNumber]"
+        id="RegisterForm-VATNumber"
+        placeholder="VAT Number">
+      <label for="RegisterForm-VATNumber">
+        VAT Number
+      </label>
+    </div>
+    <div class="field">
+      <input
+        type="file"
+        name="customer[note][BusinessLicense]"
+        id="RegisterForm-BusinessLicense">
+      <label for="RegisterForm-BusinessLicense">
+        Business License / Extract from the Commercial Register
+      </label>
+    </div>
+    <div class="field">
+      <label>What They Repair (Multi-Choice)</label>
+      <div>
+        <input
+          type="checkbox"
+          name="customer[note][Repair][]"
+          value="Electronics"> Electronics<br>
+        <input
+          type="checkbox"
+          name="customer[note][Repair][]"
+          value="Appliances"> Appliances<br>
+        <input
+          type="checkbox"
+          name="customer[note][Repair][]"
+          value="Furniture"> Furniture<br>
+      <!-- Add more options as needed -->
+      </div>
+    </div>
+    <div class="field">
+      <label>Their Services (Multi-Choice)</label>
+      <div>
+        <input
+          type="checkbox"
+          name="customer[note][Services][]"
+          value="Repair"> Repair<br>
+        <input
+          type="checkbox"
+          name="customer[note][Services][]"
+          value="Maintenance"> Maintenance<br>
+        <input
+          type="checkbox"
+          name="customer[note][Services][]"
+          value="Installation"> Installation<br>
+      <!-- Add more options as needed -->
+      </div>
+    </div>
+    <div class="field">
+      <input
+        type="url"
+        name="customer[note][Website]"
+        id="RegisterForm-Website"
+        placeholder="Website">
+      <label for="RegisterForm-Website">
+        Website
+      </label>
+    </div>
+    <div class="field">
+      <input
+        type="tel"
+        name="customer[note][WhatsAppNumber]"
+        id="RegisterForm-WhatsAppNumber"
+        placeholder="WhatsApp Number">
+      <label for="RegisterForm-WhatsAppNumber">
+        WhatsApp Number
+      </label>
+    </div>
+    <div class="field">
+      <input
+        type="url"
+        name="customer[note][Facebook]"
+        id="RegisterForm-Facebook"
+        placeholder="Facebook">
+      <label for="RegisterForm-Facebook">
+        Facebook
+      </label>
+    </div>
+    <div class="field">
+      <input
+        type="url"
+        name="customer[note][Instagram]"
+        id="RegisterForm-Instagram"
+        placeholder="Instagram">
+      <label for="RegisterForm-Instagram">
+        Instagram
+      </label>
+    </div>
+    <div class="field">
+      <input
+        type="url"
+        name="customer[note][LinkedIn]"
+        id="RegisterForm-LinkedIn"
+        placeholder="LinkedIn">
+      <label for="RegisterForm-LinkedIn">
+        LinkedIn
+      </label>
+    </div>
+
     <button>
       {{ 'customer.register.submit' | t }}
     </button>
@@ -134,33 +313,31 @@
 </div>
 
 {% schema %}
-{
-  "name": "t:sections.main-register.name",
-  "settings": [
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
-    }
-  ]
-}
+  {
+    "name": "t:sections.main-register.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ]
+  }
 {% endschema %}
