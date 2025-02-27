@@ -261,7 +261,7 @@
             {% render block %}
         {%- endcase -%}
       {%- endfor -%}
-
+      {% if customer %}
       <a href="{% if customer %}{{ routes.cart_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
             <span class="svg-wrapper">{{'icon-cart-empty.svg' | inline_asset_content }}</span>
@@ -278,6 +278,7 @@
           </div>
         {%- endif -%}
       </a>
+    {%  endif %}
     </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
