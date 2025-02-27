@@ -130,11 +130,11 @@
       </span>
     {%- endif -%}
 
-    <!-- New Fields -->
+    <!-- New Fields (Using Metafields) -->
     <div class="field">
       <input
         type="text"
-        name="customer[note][Company]"
+        name="customer[metafields][custom.company]"
         id="RegisterForm-Company"
         placeholder="Company">
       <label for="RegisterForm-Company">
@@ -144,7 +144,7 @@
     <div class="field">
       <input
         type="tel"
-        name="customer[note][Phone]"
+        name="customer[metafields][custom.phone]"
         id="RegisterForm-Phone"
         placeholder="Phone">
       <label for="RegisterForm-Phone">
@@ -154,7 +154,7 @@
     <div class="field">
       <input
         type="text"
-        name="customer[note][Address1]"
+        name="customer[metafields][custom.address1]"
         id="RegisterForm-Address1"
         placeholder="Address 1">
       <label for="RegisterForm-Address1">
@@ -164,7 +164,7 @@
     <div class="field">
       <input
         type="text"
-        name="customer[note][Address2]"
+        name="customer[metafields][custom.address2]"
         id="RegisterForm-Address2"
         placeholder="Address 2">
       <label for="RegisterForm-Address2">
@@ -172,7 +172,7 @@
       </label>
     </div>
     <div class="field">
-      <select name="customer[note][Country]" id="RegisterForm-Country">
+      <select name="customer[metafields][custom.country]" id="RegisterForm-Country">
         <option value="">Select Country</option>
       <!-- Add country options here -->
       </select>
@@ -183,7 +183,7 @@
     <div class="field">
       <input
         type="text"
-        name="customer[note][City]"
+        name="customer[metafields][custom.city]"
         id="RegisterForm-City"
         placeholder="City">
       <label for="RegisterForm-City">
@@ -193,7 +193,7 @@
     <div class="field">
       <input
         type="text"
-        name="customer[note][ZipCode]"
+        name="customer[metafields][custom.zip_code]"
         id="RegisterForm-ZipCode"
         placeholder="Zip Code">
       <label for="RegisterForm-ZipCode">
@@ -203,7 +203,7 @@
     <div class="field">
       <input
         type="text"
-        name="customer[note][VATNumber]"
+        name="customer[metafields][custom.vat_number]"
         id="RegisterForm-VATNumber"
         placeholder="VAT Number">
       <label for="RegisterForm-VATNumber">
@@ -213,7 +213,7 @@
     <div class="field">
       <input
         type="file"
-        name="customer[note][BusinessLicense]"
+        name="customer[metafields][custom.business_license]"
         id="RegisterForm-BusinessLicense">
       <label for="RegisterForm-BusinessLicense">
         Business License / Extract from the Commercial Register
@@ -224,15 +224,15 @@
       <div>
         <input
           type="checkbox"
-          name="customer[note][Repair][]"
+          name="customer[metafields][custom.repair][]"
           value="Electronics"> Electronics<br>
         <input
           type="checkbox"
-          name="customer[note][Repair][]"
+          name="customer[metafields][custom.repair][]"
           value="Appliances"> Appliances<br>
         <input
           type="checkbox"
-          name="customer[note][Repair][]"
+          name="customer[metafields][custom.repair][]"
           value="Furniture"> Furniture<br>
       <!-- Add more options as needed -->
       </div>
@@ -242,15 +242,15 @@
       <div>
         <input
           type="checkbox"
-          name="customer[note][Services][]"
+          name="customer[metafields][custom.services][]"
           value="Repair"> Repair<br>
         <input
           type="checkbox"
-          name="customer[note][Services][]"
+          name="customer[metafields][custom.services][]"
           value="Maintenance"> Maintenance<br>
         <input
           type="checkbox"
-          name="customer[note][Services][]"
+          name="customer[metafields][custom.services][]"
           value="Installation"> Installation<br>
       <!-- Add more options as needed -->
       </div>
@@ -258,7 +258,7 @@
     <div class="field">
       <input
         type="url"
-        name="customer[note][Website]"
+        name="customer[metafields][custom.website]"
         id="RegisterForm-Website"
         placeholder="Website">
       <label for="RegisterForm-Website">
@@ -268,7 +268,7 @@
     <div class="field">
       <input
         type="tel"
-        name="customer[note][WhatsAppNumber]"
+        name="customer[metafields][custom.whatsapp_number]"
         id="RegisterForm-WhatsAppNumber"
         placeholder="WhatsApp Number">
       <label for="RegisterForm-WhatsAppNumber">
@@ -278,7 +278,7 @@
     <div class="field">
       <input
         type="url"
-        name="customer[note][Facebook]"
+        name="customer[metafields][custom.facebook]"
         id="RegisterForm-Facebook"
         placeholder="Facebook">
       <label for="RegisterForm-Facebook">
@@ -288,7 +288,7 @@
     <div class="field">
       <input
         type="url"
-        name="customer[note][Instagram]"
+        name="customer[metafields][custom.instagram]"
         id="RegisterForm-Instagram"
         placeholder="Instagram">
       <label for="RegisterForm-Instagram">
@@ -298,7 +298,7 @@
     <div class="field">
       <input
         type="url"
-        name="customer[note][LinkedIn]"
+        name="customer[metafields][custom.linkedin]"
         id="RegisterForm-LinkedIn"
         placeholder="LinkedIn">
       <label for="RegisterForm-LinkedIn">
