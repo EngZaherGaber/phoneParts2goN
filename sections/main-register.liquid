@@ -31,7 +31,7 @@
   }
   .field {
     flex: 1;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 
   /* Responsive Adjustments */
@@ -140,7 +140,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[metafields][custom.company]"
+            name="custom.company"
             id="RegisterForm-Company"
             placeholder="Company"
             required>
@@ -152,7 +152,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[metafields][custom.address1]"
+            name="custom.address1"
             id="RegisterForm-Address1"
             placeholder="Address 1"
             required>
@@ -163,7 +163,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[metafields][custom.address2]"
+            name="custom.address2"
             id="RegisterForm-Address2"
             placeholder="Address 2"
             required>
@@ -174,7 +174,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[metafields][custom.city]"
+            name="custom.city"
             id="RegisterForm-City"
             placeholder="City"
             required>
@@ -184,7 +184,7 @@
       <div class="field-row">
         <div class="field">
           <select
-            name="customer[metafields][custom.country]"
+            name="custom.country"
             id="RegisterForm-Country"
             required>
             <option value="">Select Country</option>
@@ -198,7 +198,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[metafields][custom.zip_code]"
+            name="custom.zip_code"
             id="RegisterForm-ZipCode"
             placeholder="Zip Code"
             required>
@@ -214,7 +214,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[metafields][custom.vat_number]"
+            name="custom.vat_number"
             id="RegisterForm-VATNumber"
             placeholder="VAT Number">
           <label for="RegisterForm-VATNumber">VAT Number</label>
@@ -229,7 +229,7 @@
         <div class="field">
           <input
             type="file"
-            name="customer[metafields][custom.business_license]"
+            name="custom.business_license"
             id="RegisterForm-BusinessLicense">
           <label for="RegisterForm-BusinessLicense">Business License / Extract from the Commercial Register</label>
         </div>
@@ -239,24 +239,30 @@
     <!-- 5. We Repair (Multi-Choice) -->
     <fieldset class="form-group">
       <legend>What They Repair (Multi-Choice)</legend>
-      <div class="field-row">
-        <div class="field">
-
+      <div class="flx-col">
+        <div class="field-row">
           <input
             type="checkbox"
-            name="customer[metafields][custom.repair][]"
+            name="custom.repair[]"
             value="Electronics"> Electronics<br>
-          <label for=""></label>
-          <input
-            type="checkbox"
-            name="customer[metafields][custom.repair][]"
-            value="Appliances"> Appliances<br>
-          <input
-            type="checkbox"
-            name="customer[metafields][custom.repair][]"
-            value="Furniture"> Furniture<br>
-        <!-- Add more options as needed -->
+          <label for="">Electronics</label>
         </div>
+        <div class="field-row">
+          <input
+            type="checkbox"
+            name="custom.repair[]"
+            value="Appliances">
+          <label for="">Appliances</label>
+        </div>
+        <div class="field-row">
+          <input
+            type="checkbox"
+            name="custom.repair[]"
+            value="Furniture">
+          <label for="">Furniture</label>
+        </div>
+
+      <!-- Add more options as needed -->
       </div>
     </fieldset>
 
@@ -267,7 +273,7 @@
         <div class="field-row">
           <input
             type="checkbox"
-            name="customer[metafields][custom.services][]"
+            name="custom.services[]"
             value="Repair">
           <label for="">Repair</label>
         <!-- Add more options as needed -->
@@ -275,14 +281,14 @@
         <div class="field-row">
           <input
             type="checkbox"
-            name="customer[metafields][custom.services][]"
+            name="custom.services[]"
             value="Maintenance">
           <label for="">Maintenance</label>
         </div>
         <div class="field-row">
           <input
             type="checkbox"
-            name="customer[metafields][custom.services][]"
+            name="custom.services[]"
             value="Installation">
           <label for="">Installation</label>
         </div>
@@ -296,7 +302,7 @@
         <div class="field">
           <input
             type="tel"
-            name="customer[metafields][custom.phone]"
+            name="custom.phone"
             id="RegisterForm-Phone"
             placeholder="Phone"
             required>
@@ -306,7 +312,7 @@
         <div class="field">
           <input
             type="tel"
-            name="customer[metafields][custom.whatsapp_number]"
+            name="custom.whatsapp_number"
             id="RegisterForm-WhatsAppNumber"
             placeholder="WhatsApp Number">
           <label for="RegisterForm-WhatsAppNumber">WhatsApp Number</label>
@@ -316,7 +322,7 @@
         <div class="field">
           <input
             type="url"
-            name="customer[metafields][custom.website]"
+            name="custom.website"
             id="RegisterForm-Website"
             placeholder="Website">
           <label for="RegisterForm-Website">Website</label>
@@ -326,7 +332,7 @@
         <div class="field">
           <input
             type="url"
-            name="customer[metafields][custom.facebook]"
+            name="custom.facebook"
             id="RegisterForm-Facebook"
             placeholder="Facebook">
           <label for="RegisterForm-Facebook">Facebook</label>
@@ -336,7 +342,7 @@
         <div class="field">
           <input
             type="url"
-            name="customer[metafields][custom.instagram]"
+            name="custom.instagram"
             id="RegisterForm-Instagram"
             placeholder="Instagram">
           <label for="RegisterForm-Instagram">Instagram</label>
@@ -347,7 +353,7 @@
         <div class="field">
           <input
             type="url"
-            name="customer[metafields][custom.linkedin]"
+            name="custom.linkedin"
             id="RegisterForm-LinkedIn"
             placeholder="LinkedIn">
           <label for="RegisterForm-LinkedIn">LinkedIn</label>
