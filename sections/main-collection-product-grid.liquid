@@ -97,12 +97,14 @@
             <h2 class="product-count__text text-body">
               <span id="ProductCountDesktop">
                 {%- if collection.results_count -%}
-                  {{ 'templates.search.results_with_count' | t: terms: collection.terms, count: collection.results_count
+                  {{
+                    'templates.search.results_with_count' | t: terms: collection.terms, count: collection.results_count
                   }}
                 {%- elsif collection.products_count == collection.all_products_count -%}
                   {{ 'products.facets.product_count_simple' | t: count: collection.products_count }}
                 {%- else -%}
-                  {{ 'products.facets.product_count' | t: product_count: collection.products_count, count: collection.all_products_count
+                  {{
+                    'products.facets.product_count' | t: product_count: collection.products_count, count: collection.all_products_count
                   }}
                 {%- endif -%}
               </span>
@@ -147,7 +149,8 @@
               <h2 class="title title--primary">
                 {{ 'sections.collection_template.empty' | t -}}
                 <br>
-                {{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: 'underlined-link link'
+                {{
+                  'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: 'underlined-link link'
                 }}
               </h2>
             </div>
