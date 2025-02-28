@@ -150,6 +150,39 @@
       </div>
       <div class="field-row">
         <div class="field">
+          <select
+            name="custom.country"
+            id="RegisterForm-Country"
+            required>
+            <option value="">Select Country</option>
+            {% assign european_countries = "Austria,Belgium,Bulgaria,Croatia,Cyprus,Czech Republic,Denmark,Estonia,Finland,France,Germany,Greece,Hungary,Ireland,Italy,Latvia,Lithuania,Luxembourg,Malta,Netherlands,Poland,Portugal,Romania,Slovakia,Slovenia,Spain,Sweden" | split: ',' %}
+            {% for country in european_countries %}
+              <option value="{{ country }}">{{ country }}</option>
+            {% endfor %}
+          </select>
+        {% comment %} <label for="RegisterForm-Country">Country</label> {% endcomment %}
+        </div>
+        <div class="field">
+          <input
+            type="text"
+            name="custom.city"
+            id="RegisterForm-City"
+            placeholder="City"
+            required>
+          <label for="RegisterForm-City">City</label>
+        </div>
+        <div class="field">
+          <input
+            type="text"
+            name="custom.zip_code"
+            id="RegisterForm-ZipCode"
+            placeholder="Zip Code"
+            required>
+          <label for="RegisterForm-ZipCode">Zip Code</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
           <input
             type="text"
             name="custom.address1"
@@ -168,41 +201,6 @@
             placeholder="Address 2"
             required>
           <label for="RegisterForm-Address2">Address 2</label>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <input
-            type="text"
-            name="custom.city"
-            id="RegisterForm-City"
-            placeholder="City"
-            required>
-          <label for="RegisterForm-City">City</label>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <select
-            name="custom.country"
-            id="RegisterForm-Country"
-            required>
-            <option value="">Select Country</option>
-            {% assign european_countries = "Austria,Belgium,Bulgaria,Croatia,Cyprus,Czech Republic,Denmark,Estonia,Finland,France,Germany,Greece,Hungary,Ireland,Italy,Latvia,Lithuania,Luxembourg,Malta,Netherlands,Poland,Portugal,Romania,Slovakia,Slovenia,Spain,Sweden" | split: ',' %}
-            {% for country in european_countries %}
-              <option value="{{ country }}">{{ country }}</option>
-            {% endfor %}
-          </select>
-        {% comment %} <label for="RegisterForm-Country">Country</label> {% endcomment %}
-        </div>
-        <div class="field">
-          <input
-            type="text"
-            name="custom.zip_code"
-            id="RegisterForm-ZipCode"
-            placeholder="Zip Code"
-            required>
-          <label for="RegisterForm-ZipCode">Zip Code</label>
         </div>
       </div>
     </fieldset>
