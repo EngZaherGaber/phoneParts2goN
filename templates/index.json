@@ -58,19 +58,19 @@
         "featured_collection_tEYJgG": {
           "type": "featured_collection",
           "settings": {
-            "collection": "for-apple"
+            "collection": "for-apple-1"
           }
         },
         "featured_collection_WN7WNQ": {
           "type": "featured_collection",
           "settings": {
-            "collection": "screens"
+            "collection": "samsung"
           }
         },
         "featured_collection_fWdicN": {
           "type": "featured_collection",
           "settings": {
-            "collection": "pixdura"
+            "collection": "pixudra"
           }
         },
         "featured_collection_efD6md": {
@@ -106,7 +106,7 @@
         "image_ratio": "square",
         "columns_desktop": 6,
         "color_scheme": "scheme-4",
-        "show_view_all": true,
+        "show_view_all": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 20,
