@@ -351,7 +351,42 @@
       </div>
     </fieldset>
 
-    <!-- 2. Address Information -->
+    <!-- 2. Password Fields -->
+    <fieldset class="form-group">
+      <legend>Password</legend>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="password"
+            name="customer[password]"
+            id="RegisterForm-Password"
+            placeholder="Password"
+            aria-required="true"
+            required>
+          <label for="RegisterForm-Password">Password</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="password"
+            name="customer[confirm_password]"
+            id="RegisterForm-ConfirmPassword"
+            placeholder="Confirm Password"
+            aria-required="true"
+            required>
+          <label for="RegisterForm-ConfirmPassword">Confirm Password</label>
+        </div>
+      </div>
+      <div
+        id="password-error"
+        class="form__message"
+        style="display: none; color: red;">
+        Passwords do not match.
+      </div>
+    </fieldset>
+
+    <!-- 3. Address Information -->
     <fieldset class="form-group">
       <legend>Address Information</legend>
       <div class="field-row">
@@ -366,7 +401,6 @@
               <option value="{{ country }}">{{ country }}</option>
             {% endfor %}
           </select>
-        {% comment %} <label for="RegisterForm-Country">Country</label> {% endcomment %}
         </div>
         <div class="field">
           <input
@@ -418,11 +452,9 @@
           <label for="RegisterForm-Company">Company</label>
         </div>
       </div>
-
-
     </fieldset>
 
-    <!-- 3. VAT Information -->
+    <!-- 4. VAT Information -->
     <fieldset class="form-group">
       <legend>VAT Information</legend>
       <div class="field-row">
@@ -437,7 +469,7 @@
       </div>
     </fieldset>
 
-    <!-- 4. Business License -->
+    <!-- 5. Business License -->
     <fieldset class="form-group">
       <legend>Business License</legend>
       <div class="field-row">
@@ -452,7 +484,7 @@
       </div>
     </fieldset>
 
-    <!-- 5. We Repair (Multi-Choice) -->
+    <!-- 6. We Repair (Multi-Choice) -->
     <fieldset class="form-group">
       <legend>What They Repair (Multi-Choice)</legend>
       <div class="flx-col">
@@ -480,11 +512,10 @@
             id="repair-furniture">
           <label for="repair-furniture">Furniture</label>
         </div>
-      <!-- Add more options as needed -->
       </div>
     </fieldset>
 
-    <!-- 6. Our Services (Multi-Choice) -->
+    <!-- 7. Our Services (Multi-Choice) -->
     <fieldset class="form-group">
       <legend>Our Services (Multi-Choice)</legend>
       <div class="flx-col">
@@ -512,11 +543,10 @@
             id="service-installation">
           <label for="service-installation">Installation</label>
         </div>
-      <!-- Add more options as needed -->
       </div>
     </fieldset>
 
-    <!-- 7. Contact Information -->
+    <!-- 8. Contact Information -->
     <fieldset class="form-group">
       <legend>Contact Information</legend>
       <div class="field-row">
@@ -529,7 +559,6 @@
             required>
           <label for="RegisterForm-Phone">Phone</label>
         </div>
-
         <div class="field">
           <input
             type="tel"
@@ -568,7 +597,6 @@
             placeholder="Instagram">
           <label for="RegisterForm-Instagram">Instagram</label>
         </div>
-
       </div>
       <div class="field-row">
         <div class="field">
@@ -581,10 +609,28 @@
         </div>
       </div>
     </fieldset>
+
     <button class="no-cart">{{ 'customer.register.submit' | t }}</button>
   {%- endform -%}
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const passwordField = document.getElementById('RegisterForm-Password');
+    const confirmPasswordField = document.getElementById('RegisterForm-ConfirmPassword');
+    const passwordError = document.getElementById('password-error');
+    const form = document.querySelector('form[action$="/account"]');
 
+    form.addEventListener('submit', function (e) {
+      if (passwordField.value !== confirmPasswordField.value) {
+        e.preventDefault(); // Prevent form submission
+        passwordError.style.display = 'block'; // Show error message
+        confirmPasswordField.focus(); // Focus on the confirm password field
+      } else {
+        passwordError.style.display = 'none'; // Hide error message
+      }
+    });
+  });
+</script>
 {% schema %}
   {
     "name": "t:sections.main-register.name",
