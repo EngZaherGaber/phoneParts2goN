@@ -24,7 +24,11 @@
     gap: 20px;
     margin-bottom: 15px;
   }
-
+  .flx-col {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
   .field {
     flex: 1;
     margin-bottom: 0;
@@ -259,7 +263,7 @@
     <!-- 6. Our Services (Multi-Choice) -->
     <fieldset class="form-group">
       <legend>Our Services (Multi-Choice)</legend>
-      <div class="field-row">
+      <div class="flx-col">
         <div class="field-row">
           <input
             type="checkbox"
