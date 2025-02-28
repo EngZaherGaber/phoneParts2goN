@@ -5,7 +5,36 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+  /* Group Styling */
+  fieldset.form-group {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
 
+  legend {
+    font-weight: bold;
+    padding: 0 10px;
+  }
+
+  /* Field Row Styling */
+  .field-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+
+  .field {
+    flex: 1;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .field-row {
+      flex-direction: column;
+    }
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -25,9 +54,7 @@
         class="form__message"
         tabindex="-1"
         autofocus>
-        <span class="svg-wrapper">
-          {{- 'icon-error.svg' | inline_asset_content -}}
-        </span>
+        <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
         {{ 'templates.contact.form.error_heading' | t }}
       </h2>
       <ul>
@@ -46,269 +73,264 @@
       </ul>
     {%- endif -%}
 
-    <!-- Existing Fields -->
-    <div class="field">
-      <input
-        type="text"
-        name="customer[first_name]"
-        id="RegisterForm-FirstName"
-        {% if form.first_name %}
-        value="{{ form.first_name }}"
-        {% endif %}
-        autocomplete="given-name"
-        placeholder="{{ 'customer.register.first_name' | t }}">
-      <label for="RegisterForm-FirstName">
-        {{ 'customer.register.first_name' | t }}
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="text"
-        name="customer[last_name]"
-        id="RegisterForm-LastName"
-        {% if form.last_name %}
-        value="{{ form.last_name }}"
-        {% endif %}
-        autocomplete="family-name"
-        placeholder="{{ 'customer.register.last_name' | t }}">
-      <label for="RegisterForm-LastName">
-        {{ 'customer.register.last_name' | t }}
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="email"
-        name="customer[email]"
-        id="RegisterForm-email"
-        {% if form.email %}
-        value="{{ form.email }}"
-        {% endif %}
-        spellcheck="false"
-        autocapitalize="off"
-        autocomplete="email"
-        aria-required="true"
-        {% if form.errors contains 'email' %}
-        aria-invalid="true"
-        aria-describedby="RegisterForm-email-error"
-        {% endif %}
-        placeholder="{{ 'customer.register.email' | t }}">
-      <label for="RegisterForm-email">
-        {{ 'customer.register.email' | t }}
-      </label>
-    </div>
-    {%- if form.errors contains 'email' -%}
-      <span id="RegisterForm-email-error" class="form__message">
-        <span class="svg-wrapper">
-          {{- 'icon-error.svg' | inline_asset_content -}}
-        </span>
-        {{ form.errors.translated_fields.email | capitalize }}
-        {{ form.errors.messages.email }}.
-      </span>
-    {%- endif -%}
-    <div class="field">
-      <input
-        type="password"
-        name="customer[password]"
-        id="RegisterForm-password"
-        aria-required="true"
-        {% if form.errors contains 'password' %}
-        aria-invalid="true"
-        aria-describedby="RegisterForm-password-error"
-        {% endif %}
-        placeholder="{{ 'customer.register.password' | t }}">
-      <label for="RegisterForm-password">
-        {{ 'customer.register.password' | t }}
-      </label>
-    </div>
-    {%- if form.errors contains 'password' -%}
-      <span id="RegisterForm-password-error" class="form__message">
-        <span class="svg-wrapper">
-          {{- 'icon-error.svg' | inline_asset_content -}}
-        </span>
-        {{ form.errors.translated_fields.password | capitalize }}
-        {{ form.errors.messages.password }}.
-      </span>
-    {%- endif -%}
-
-    <!-- New Fields (Using Metafields) -->
-    <div class="field">
-      <input
-        type="text"
-        name="customer[metafields][custom.company]"
-        id="RegisterForm-Company"
-        placeholder="Company">
-      <label for="RegisterForm-Company">
-        Company
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="tel"
-        name="customer[metafields][custom.phone]"
-        id="RegisterForm-Phone"
-        placeholder="Phone">
-      <label for="RegisterForm-Phone">
-        Phone
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="text"
-        name="customer[metafields][custom.address1]"
-        id="RegisterForm-Address1"
-        placeholder="Address 1">
-      <label for="RegisterForm-Address1">
-        Address 1
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="text"
-        name="customer[metafields][custom.address2]"
-        id="RegisterForm-Address2"
-        placeholder="Address 2">
-      <label for="RegisterForm-Address2">
-        Address 2
-      </label>
-    </div>
-    <div class="field">
-      <select name="customer[metafields][custom.country]" id="RegisterForm-Country">
-        <option value="">Select Country</option>
-      <!-- Add country options here -->
-      </select>
-      <label for="RegisterForm-Country">
-        Country
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="text"
-        name="customer[metafields][custom.city]"
-        id="RegisterForm-City"
-        placeholder="City">
-      <label for="RegisterForm-City">
-        City
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="text"
-        name="customer[metafields][custom.zip_code]"
-        id="RegisterForm-ZipCode"
-        placeholder="Zip Code">
-      <label for="RegisterForm-ZipCode">
-        Zip Code
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="text"
-        name="customer[metafields][custom.vat_number]"
-        id="RegisterForm-VATNumber"
-        placeholder="VAT Number">
-      <label for="RegisterForm-VATNumber">
-        VAT Number
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="file"
-        name="customer[metafields][custom.business_license]"
-        id="RegisterForm-BusinessLicense">
-      <label for="RegisterForm-BusinessLicense">
-        Business License / Extract from the Commercial Register
-      </label>
-    </div>
-    <div class="field">
-      <label>What They Repair (Multi-Choice)</label>
-      <div>
-        <input
-          type="checkbox"
-          name="customer[metafields][custom.repair][]"
-          value="Electronics"> Electronics<br>
-        <input
-          type="checkbox"
-          name="customer[metafields][custom.repair][]"
-          value="Appliances"> Appliances<br>
-        <input
-          type="checkbox"
-          name="customer[metafields][custom.repair][]"
-          value="Furniture"> Furniture<br>
-      <!-- Add more options as needed -->
+    <!-- 1. Personal Information -->
+    <fieldset class="form-group">
+      <legend>Personal Information</legend>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="email"
+            name="customer[email]"
+            id="RegisterForm-email"
+            {% if form.email %}
+            value="{{ form.email }}"
+            {% endif %}
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="email"
+            aria-required="true"
+            {% if form.errors contains 'email' %}
+            aria-invalid="true"
+            aria-describedby="RegisterForm-email-error"
+            {% endif %}
+            placeholder="{{ 'customer.register.email' | t }}"
+            required>
+          <label for="RegisterForm-email">{{ 'customer.register.email' | t }}</label>
+        </div>
       </div>
-    </div>
-    <div class="field">
-      <label>Their Services (Multi-Choice)</label>
-      <div>
-        <input
-          type="checkbox"
-          name="customer[metafields][custom.services][]"
-          value="Repair"> Repair<br>
-        <input
-          type="checkbox"
-          name="customer[metafields][custom.services][]"
-          value="Maintenance"> Maintenance<br>
-        <input
-          type="checkbox"
-          name="customer[metafields][custom.services][]"
-          value="Installation"> Installation<br>
-      <!-- Add more options as needed -->
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="text"
+            name="customer[first_name]"
+            id="RegisterForm-FirstName"
+            {% if form.first_name %}
+            value="{{ form.first_name }}"
+            {% endif %}
+            autocomplete="given-name"
+            placeholder="{{ 'customer.register.first_name' | t }}"
+            required>
+          <label for="RegisterForm-FirstName">{{ 'customer.register.first_name' | t }}</label>
+        </div>
+        <div class="field">
+          <input
+            type="text"
+            name="customer[last_name]"
+            id="RegisterForm-LastName"
+            {% if form.last_name %}
+            value="{{ form.last_name }}"
+            {% endif %}
+            autocomplete="family-name"
+            placeholder="{{ 'customer.register.last_name' | t }}"
+            required>
+          <label for="RegisterForm-LastName">{{ 'customer.register.last_name' | t }}</label>
+        </div>
       </div>
-    </div>
-    <div class="field">
-      <input
-        type="url"
-        name="customer[metafields][custom.website]"
-        id="RegisterForm-Website"
-        placeholder="Website">
-      <label for="RegisterForm-Website">
-        Website
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="tel"
-        name="customer[metafields][custom.whatsapp_number]"
-        id="RegisterForm-WhatsAppNumber"
-        placeholder="WhatsApp Number">
-      <label for="RegisterForm-WhatsAppNumber">
-        WhatsApp Number
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="url"
-        name="customer[metafields][custom.facebook]"
-        id="RegisterForm-Facebook"
-        placeholder="Facebook">
-      <label for="RegisterForm-Facebook">
-        Facebook
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="url"
-        name="customer[metafields][custom.instagram]"
-        id="RegisterForm-Instagram"
-        placeholder="Instagram">
-      <label for="RegisterForm-Instagram">
-        Instagram
-      </label>
-    </div>
-    <div class="field">
-      <input
-        type="url"
-        name="customer[metafields][custom.linkedin]"
-        id="RegisterForm-LinkedIn"
-        placeholder="LinkedIn">
-      <label for="RegisterForm-LinkedIn">
-        LinkedIn
-      </label>
-    </div>
+    </fieldset>
 
-    <button>
-      {{ 'customer.register.submit' | t }}
-    </button>
+    <!-- 2. Address Information -->
+    <fieldset class="form-group">
+      <legend>Address Information</legend>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="text"
+            name="customer[metafields][custom.company]"
+            id="RegisterForm-Company"
+            placeholder="Company"
+            required>
+          <label for="RegisterForm-Company">Company</label>
+        </div>
+        <div class="field">
+          <input
+            type="tel"
+            name="customer[metafields][custom.phone]"
+            id="RegisterForm-Phone"
+            placeholder="Phone"
+            required>
+          <label for="RegisterForm-Phone">Phone</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="text"
+            name="customer[metafields][custom.address1]"
+            id="RegisterForm-Address1"
+            placeholder="Address 1"
+            required>
+          <label for="RegisterForm-Address1">Address 1</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="text"
+            name="customer[metafields][custom.address2]"
+            id="RegisterForm-Address2"
+            placeholder="Address 2"
+            required>
+          <label for="RegisterForm-Address2">Address 2</label>
+        </div>
+        <div class="field">
+          <select
+            name="customer[metafields][custom.country]"
+            id="RegisterForm-Country"
+            required>
+            <option value="">Select Country</option>
+            {% assign european_countries = "Austria,Belgium,Bulgaria,Croatia,Cyprus,Czech Republic,Denmark,Estonia,Finland,France,Germany,Greece,Hungary,Ireland,Italy,Latvia,Lithuania,Luxembourg,Malta,Netherlands,Poland,Portugal,Romania,Slovakia,Slovenia,Spain,Sweden" | split: ',' %}
+            {% for country in european_countries %}
+              <option value="{{ country }}">{{ country }}</option>
+            {% endfor %}
+          </select>
+          <label for="RegisterForm-Country">Country</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="text"
+            name="customer[metafields][custom.city]"
+            id="RegisterForm-City"
+            placeholder="City"
+            required>
+          <label for="RegisterForm-City">City</label>
+        </div>
+        <div class="field">
+          <input
+            type="text"
+            name="customer[metafields][custom.zip_code]"
+            id="RegisterForm-ZipCode"
+            placeholder="Zip Code"
+            required>
+          <label for="RegisterForm-ZipCode">Zip Code</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- 3. VAT Information -->
+    <fieldset class="form-group">
+      <legend>VAT Information</legend>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="text"
+            name="customer[metafields][custom.vat_number]"
+            id="RegisterForm-VATNumber"
+            placeholder="VAT Number">
+          <label for="RegisterForm-VATNumber">VAT Number</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- 4. Business License -->
+    <fieldset class="form-group">
+      <legend>Business License</legend>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="file"
+            name="customer[metafields][custom.business_license]"
+            id="RegisterForm-BusinessLicense">
+          <label for="RegisterForm-BusinessLicense">Business License / Extract from the Commercial Register</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- 5. We Repair (Multi-Choice) -->
+    <fieldset class="form-group">
+      <legend>What They Repair (Multi-Choice)</legend>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="checkbox"
+            name="customer[metafields][custom.repair][]"
+            value="Electronics"> Electronics<br>
+          <input
+            type="checkbox"
+            name="customer[metafields][custom.repair][]"
+            value="Appliances"> Appliances<br>
+          <input
+            type="checkbox"
+            name="customer[metafields][custom.repair][]"
+            value="Furniture"> Furniture<br>
+        <!-- Add more options as needed -->
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- 6. Our Services (Multi-Choice) -->
+    <fieldset class="form-group">
+      <legend>Our Services (Multi-Choice)</legend>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="checkbox"
+            name="customer[metafields][custom.services][]"
+            value="Repair"> Repair<br>
+          <input
+            type="checkbox"
+            name="customer[metafields][custom.services][]"
+            value="Maintenance"> Maintenance<br>
+          <input
+            type="checkbox"
+            name="customer[metafields][custom.services][]"
+            value="Installation"> Installation<br>
+        <!-- Add more options as needed -->
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- 7. Contact Information -->
+    <fieldset class="form-group">
+      <legend>Contact Information</legend>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="url"
+            name="customer[metafields][custom.website]"
+            id="RegisterForm-Website"
+            placeholder="Website">
+          <label for="RegisterForm-Website">Website</label>
+        </div>
+        <div class="field">
+          <input
+            type="tel"
+            name="customer[metafields][custom.whatsapp_number]"
+            id="RegisterForm-WhatsAppNumber"
+            placeholder="WhatsApp Number">
+          <label for="RegisterForm-WhatsAppNumber">WhatsApp Number</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="url"
+            name="customer[metafields][custom.facebook]"
+            id="RegisterForm-Facebook"
+            placeholder="Facebook">
+          <label for="RegisterForm-Facebook">Facebook</label>
+        </div>
+        <div class="field">
+          <input
+            type="url"
+            name="customer[metafields][custom.instagram]"
+            id="RegisterForm-Instagram"
+            placeholder="Instagram">
+          <label for="RegisterForm-Instagram">Instagram</label>
+        </div>
+        <div class="field">
+          <input
+            type="url"
+            name="customer[metafields][custom.linkedin]"
+            id="RegisterForm-LinkedIn"
+            placeholder="LinkedIn">
+          <label for="RegisterForm-LinkedIn">LinkedIn</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <button>{{ 'customer.register.submit' | t }}</button>
   {%- endform -%}
 </div>
 
