@@ -31,7 +31,7 @@
   }
   .field {
     flex: 1;
-    margin-bottom: 0 !important;
+    margin: 0 !important;
   }
 
   /* Responsive Adjustments */
@@ -193,7 +193,7 @@
               <option value="{{ country }}">{{ country }}</option>
             {% endfor %}
           </select>
-          <label for="RegisterForm-Country">Country</label>
+        {% comment %} <label for="RegisterForm-Country">Country</label> {% endcomment %}
         </div>
         <div class="field">
           <input
@@ -244,7 +244,7 @@
           <input
             type="checkbox"
             name="custom.repair[]"
-            value="Electronics"> Electronics<br>
+            value="Electronics">
           <label for="">Electronics</label>
         </div>
         <div class="field-row">
