@@ -164,6 +164,19 @@
             required>
           <label for="RegisterForm-Address2">Address 2</label>
         </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <input
+            type="text"
+            name="customer[metafields][custom.city]"
+            id="RegisterForm-City"
+            placeholder="City"
+            required>
+          <label for="RegisterForm-City">City</label>
+        </div>
+      </div>
+      <div class="field-row">
         <div class="field">
           <select
             name="customer[metafields][custom.country]"
@@ -176,17 +189,6 @@
             {% endfor %}
           </select>
           <label for="RegisterForm-Country">Country</label>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <input
-            type="text"
-            name="customer[metafields][custom.city]"
-            id="RegisterForm-City"
-            placeholder="City"
-            required>
-          <label for="RegisterForm-City">City</label>
         </div>
         <div class="field">
           <input
