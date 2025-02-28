@@ -116,159 +116,163 @@
   }
   .field input,
   .customer select {
-    background: transparent !important;
-  }
-  .field {
-    margin-bottom: 20px;
-    /* Spacing between fields */
-    position: relative;
-    /* For pseudo-elements */
-  }
+  ;
+  /* background: transparent !important; */
+}
 
-  .field input,
-  .field select {
-    width: 100%;
-    /* Full width */
-    padding: 12px 16px;
-    /* Comfortable padding */
-    font-size: 16px;
-    /* Readable font size */
-    color: #333;
-    /* Text color */
-    border: 2px solid #e0e0e0;
-    /* Subtle border */
-    border-radius: 10px;
-    /* Rounded corners */
-    background-color: #fff;
-    /* White background */
-    transition: all 0.3s ease;
-    /* Smooth transition */
-    outline: none;
-    /* Remove default outline */
-  }
 
-  .field input:focus,
-  .field select:focus {
-    border-color: #3ee9a5;
-    /* Highlight border on focus */
-    box-shadow: 0 0 8px rgba(62, 233, 165, 0.3);
-    /* Glow effect on focus */
-  }
+.field {
+  margin-bottom: 20px !important;
+  /* Spacing between fields */
+  position: relative !important;
+  /* For pseudo-elements */
+}
 
-  /* Label Styling */
-  .field label {
-    display: block;
-    /* Ensure label is on its own line */
-    margin-bottom: 8px;
-    /* Spacing between label and input */
-    font-size: 14px;
-    /* Smaller font size for labels */
-    color: #555;
-    /* Subtle text color */
-    font-weight: 500;
-    /* Slightly bold */
-  }
+.field input,
+.field select {
+  width: 100% !important;
+  /* Full width */
+  padding: 12px 16px !important;
+  /* Comfortable padding */
+  font-size: 16px !important;
+  /* Readable font size */
+  color: #333 !important;
+  /* Text color */
+  border: 2px solid #e0e0e0 !important;
+  /* Subtle border */
+  border-radius: 10px !important;
+  /* Rounded corners */
+  background-color: #fff !important;
+  /* White background */
+  transition: all 0.3s ease !important;
+  /* Smooth transition */
+  outline: none !important;
+  /* Remove default outline */
+}
 
-  /* Hover Effect for Inputs */
-  .field input:hover,
-  .field select:hover {
-    border-color: #45d5dc;
-    /* Change border color on hover */
-  }
+.field input:focus,
+.field select:focus {
+  border-color: #3ee9a5 !important;
+  /* Highlight border on focus */
+  box-shadow: 0 0 8px rgba(62, 233, 165, 0.3) !important;
+  /* Glow effect on focus */
+}
 
-  /* Gradient Border Effect on Focus */
-  .field input:focus,
-  .field select:focus {
-    border-image: linear-gradient(270deg, #3ee9a5, #45d5dc);
-    border-image-slice: 1;
-  }
+/* Label Styling */
+.field label {
+  display: block !important;
+  /* Ensure label is on its own line */
+  margin-bottom: 8px !important;
+  /* Spacing between label and input */
+  font-size: 14px !important;
+  /* Smaller font size for labels */
+  color: #555 !important;
+  /* Subtle text color */
+  font-weight: 500 !important;
+  /* Slightly bold */
+}
 
-  /* Placeholder Styling */
-  .field input::placeholder {
-    color: #999;
-    /* Light placeholder text */
-    font-style: italic;
-    /* Italic placeholder */
-  }
+/* Hover Effect for Inputs */
+.field input:hover,
+.field select:hover {
+  border-color: #45d5dc !important;
+  /* Change border color on hover */
+}
 
-  /* Custom Select Arrow */
-  .field select {
-    appearance: none;
-    /* Remove default arrow */
-    background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 12px;
-  }
+/* Gradient Border Effect on Focus */
+.field input:focus,
+.field select:focus {
+  border-image: linear-gradient(270deg, #3ee9a5, #45d5dc) !important;
+  border-image-slice: 1 !important;
+}
 
-  /* Checkbox and Radio Button Styling (if needed) */
-  .field input[type="checkbox"],
-  .field input[type="radio"] {
-    width: auto;
-    /* Reset width */
-    margin-right: 8px;
-    /* Spacing between checkbox and label */
-  }
+/* Placeholder Styling */
+.field input::placeholder {
+  color: #999 !important;
+  /* Light placeholder text */
+  font-style: italic !important;
+  /* Italic placeholder */
+}
 
-  /* Button Styling (Matching .no-cart) */
-  .field button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 12px 24px;
-    font-size: 16px;
-    color: #fff !important;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 20px;
-    background: linear-gradient(270deg, #3ee9a5, #45d5dc);
-    background-size: 200% 200%;
-    background-position: 0 0;
-    transition: all 0.5s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: none;
-    cursor: pointer;
-  }
+/* Custom Select Arrow */
+.field select {
+  appearance: none !important;
+  /* Remove default arrow */
+  background-image: url("data:image/svg+xml !important;charset=UTF-8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 12px !important;
+}
 
-  .field button:hover {
-    background-position: 100% 100%;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-  }
+/* Checkbox and Radio Button Styling (if needed) */
+.field input[type="checkbox"],
+.field input[type="radio"] {
+  width: auto !important;
+  /* Reset width */
+  margin-right: 8px !important;
+  /* Spacing between checkbox and label */
+}
 
-  .field button:active {
-    transform: translateY(0);
-  }
+/* Button Styling (Matching .no-cart) */
+.field button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 12px 24px !important;
+  font-size: 16px !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  border-radius: 20px !important;
+  background: linear-gradient(270deg, #3ee9a5, #45d5dc) !important;
+  background-size: 200% 200% !important;
+  background-position: 0 0 !important;
+  transition: all 0.5s ease !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  border: none !important;
+  cursor: pointer !important;
+}
 
-  /* Glossy Overlay for Button */
-  .field button::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+.field button:hover {
+  background-position: 100% 100% !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
 
-  .field button:hover::after {
-    opacity: 1;
+.field button:active {
+  transform: translateY(0) !important;
+}
+
+/* Glossy Overlay for Button */
+.field button::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 50%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.field button:hover::after {
+  opacity: 1 !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .field-row {
+    flex-direction: column;
   }
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .field-row {
-      flex-direction: column;
-    }
+}
+@media screen and (min-width: 750px) {
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
+}
 {%- endstyle -%}
 
 <div class="customer register section-{{ section.id }}-padding">
