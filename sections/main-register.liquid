@@ -27,6 +27,7 @@
 
   .field {
     flex: 1;
+    margin-bottom: 0;
   }
 
   /* Responsive Adjustments */
@@ -236,10 +237,12 @@
       <legend>What They Repair (Multi-Choice)</legend>
       <div class="field-row">
         <div class="field">
+
           <input
             type="checkbox"
             name="customer[metafields][custom.repair][]"
             value="Electronics"> Electronics<br>
+          <label for=""></label>
           <input
             type="checkbox"
             name="customer[metafields][custom.repair][]"
@@ -257,20 +260,27 @@
     <fieldset class="form-group">
       <legend>Our Services (Multi-Choice)</legend>
       <div class="field-row">
-        <div class="field">
+        <div class="field-row">
           <input
             type="checkbox"
             name="customer[metafields][custom.services][]"
-            value="Repair"> Repair<br>
-          <input
-            type="checkbox"
-            name="customer[metafields][custom.services][]"
-            value="Maintenance"> Maintenance<br>
-          <input
-            type="checkbox"
-            name="customer[metafields][custom.services][]"
-            value="Installation"> Installation<br>
+            value="Repair">
+          <label for="">Repair</label>
         <!-- Add more options as needed -->
+        </div>
+        <div class="field-row">
+          <input
+            type="checkbox"
+            name="customer[metafields][custom.services][]"
+            value="Maintenance">
+          <label for="">Maintenance</label>
+        </div>
+        <div class="field-row">
+          <input
+            type="checkbox"
+            name="customer[metafields][custom.services][]"
+            value="Installation">
+          <label for="">Installation</label>
         </div>
       </div>
     </fieldset>
