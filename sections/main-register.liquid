@@ -12,7 +12,87 @@
     margin-bottom: 20px;
     border-radius: 5px;
   }
+  /* Custom Checkbox Styling */
+  .field-row input[type="checkbox"] {
+    opacity: 0;
+    /* Hide the default checkbox */
+    position: absolute;
+  }
 
+  .field-row input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 30px;
+    /* Space for custom checkbox */
+    cursor: pointer;
+    display: inline-block;
+    color: #333;
+    /* Text color */
+    font-size: 16px;
+    /* Text size */
+  }
+
+  /* Custom checkbox design */
+  .field-row input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    /* Checkbox size */
+    height: 20px;
+    /* Checkbox size */
+    border: 2px solid #ccc;
+    /* Checkbox border */
+    background-color: #fff;
+    /* Checkbox background */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition: all 0.3s ease;
+    /* Smooth transition */
+  }
+
+  /* Checkmark design (hidden by default) */
+  .field-row input[type="checkbox"] + label::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    /* Checkmark color */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    /* Hidden by default */
+    transition: all 0.3s ease;
+    /* Smooth transition */
+  }
+
+  /* Checkbox checked state */
+  .field-row input[type="checkbox"]:checked + label::before {
+    background-color: #007bff;
+    /* Background color when checked */
+    border-color: #007bff;
+    /* Border color when checked */
+  }
+
+  .field-row input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+    /* Show checkmark when checked */
+  }
+
+  /* Hover effect */
+  .field-row input[type="checkbox"] + label:hover::before {
+    border-color: #007bff;
+    /* Border color on hover */
+  }
+
+  /* Focus state for accessibility */
+  .field-row input[type="checkbox"]:focus + label::before {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    /* Focus ring */
+  }
   legend {
     font-weight: bold;
     padding: 0 10px;
@@ -241,24 +321,26 @@
           <input
             type="checkbox"
             name="custom.repair[]"
-            value="Electronics">
-          <label for="">Electronics</label>
+            value="Electronics"
+            id="repair-electronics">
+          <label for="repair-electronics">Electronics</label>
         </div>
         <div class="field-row">
           <input
             type="checkbox"
             name="custom.repair[]"
-            value="Appliances">
-          <label for="">Appliances</label>
+            value="Appliances"
+            id="repair-appliances">
+          <label for="repair-appliances">Appliances</label>
         </div>
         <div class="field-row">
           <input
             type="checkbox"
             name="custom.repair[]"
-            value="Furniture">
-          <label for="">Furniture</label>
+            value="Furniture"
+            id="repair-furniture">
+          <label for="repair-furniture">Furniture</label>
         </div>
-
       <!-- Add more options as needed -->
       </div>
     </fieldset>
@@ -271,24 +353,27 @@
           <input
             type="checkbox"
             name="custom.services[]"
-            value="Repair">
-          <label for="">Repair</label>
-        <!-- Add more options as needed -->
+            value="Repair"
+            id="service-repair">
+          <label for="service-repair">Repair</label>
         </div>
         <div class="field-row">
           <input
             type="checkbox"
             name="custom.services[]"
-            value="Maintenance">
-          <label for="">Maintenance</label>
+            value="Maintenance"
+            id="service-maintenance">
+          <label for="service-maintenance">Maintenance</label>
         </div>
         <div class="field-row">
           <input
             type="checkbox"
             name="custom.services[]"
-            value="Installation">
-          <label for="">Installation</label>
+            value="Installation"
+            id="service-installation">
+          <label for="service-installation">Installation</label>
         </div>
+      <!-- Add more options as needed -->
       </div>
     </fieldset>
 
