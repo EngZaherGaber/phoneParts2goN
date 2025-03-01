@@ -28,6 +28,25 @@
   {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
   {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 {%- endunless -%}
+{%- style -%}
+.quick-add__submit{
+  position: relative;
+}
+  .quick-add__submit::before{
+    content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #3498db;
+            transition: top 0.3s ease;
+            z-index: -1;
+  }
+  .quick-add__submit:hover::before {
+            top: 0;
+        }
+{%- endstyle -%}
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
