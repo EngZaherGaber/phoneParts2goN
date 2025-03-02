@@ -20,34 +20,10 @@
             "heading": "Quick-Links",
             "menu": "footer"
           }
-        },
-        "link_list_Tk7ayA": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick-Links",
-            "menu": "footer"
-          }
-        },
-        "link_list_gdXWjH": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick-Links",
-            "menu": "footer"
-          }
-        },
-        "link_list_aMA3jT": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick-Links",
-            "menu": "footer"
-          }
         }
       },
       "block_order": [
-        "link_list_KeYCLN",
-        "link_list_Tk7ayA",
-        "link_list_gdXWjH",
-        "link_list_aMA3jT"
+        "link_list_KeYCLN"
       ],
       "settings": {
         "color_scheme": "scheme-4",
