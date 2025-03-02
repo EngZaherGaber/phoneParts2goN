@@ -12,8 +12,8 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "custom_liquid_tGxhqK": {
@@ -26,5 +26,8 @@
       }
     }
   },
-  "order": ["main", "custom_liquid_tGxhqK"]
+  "order": [
+    "main",
+    "custom_liquid_tGxhqK"
+  ]
 }
