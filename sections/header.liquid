@@ -341,14 +341,14 @@
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
-      const viewportHeight = window.innerHeight;
-      // if (scrollTop >= viewportHeight) {
-      //   this.header.style.background = 'linear-gradient(45deg, rgb(11, 15, 52) 27%,  #20eeb596 124%)';
-      //   this.header.style.boxShadow  = '0px 0px 5px 0px #251d50'
-      // } else {
-      //   this.header.style.background = 'linear-gradient(180deg, #4d4d4d, #8d8d8d7a 52.08%, #85858500)';
-      //   this.header.style.boxShadow  = 'none'
-      // }
+      const viewportHeight = window.innerHeight / 2;
+      if (scrollTop >= viewportHeight) {
+        this.header.style.background = 'linear-gradient(45deg, rgb(11, 15, 52) 27%,  #20eeb596 124%)';
+        this.header.style.boxShadow  = '0px 0px 5px 0px #251d50'
+      } else {
+        this.header.style.background = 'linear-gradient(180deg, #4d4d4d, #8d8d8d7a 52.08%, #85858500)';
+        this.header.style.boxShadow  = 'none'
+      }
       if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
         this.header.classList.add('scrolled-past-header');
         if (this.preventHide) return;
