@@ -15,9 +15,19 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom_liquid_tGxhqK": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  /* Modern Table Container */\n  .modern-table-container {\n    overflow-x: auto; /* Makes the table scrollable on small screens */\n    margin: 20px 0;\n    padding: 10px;\n    border-radius: 10px;\n    background: white;\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n  }\n\n  /* Modern Table Styling */\n  .modern-table {\n    width: 100%;\n    border-collapse: collapse;\n    border-radius: 10px;\n    overflow: hidden;\n    font-family: Arial, sans-serif;\n  }\n\n  /* Table Header */\n  .modern-table thead {\n    background: linear-gradient(\n      90deg,\n      rgb(139 214 218),\n      rgb(166 236 208)\n    );\n    color: white;\n  }\n\n  .modern-table th {\n    padding: 15px;\n    text-align: left;\n    font-weight: bold;\n    text-transform: uppercase;\n    font-size: 14px;\n  }\n\n  /* Table Body */\n  .modern-table tbody tr {\n    border-bottom: 1px solid #e0e0e0;\n    transition: background 0.3s ease;\n  }\n\n  .modern-table tbody tr:hover {\n    background: rgba(166, 236, 208, 0.1); /* Light hover effect */\n  }\n\n  .modern-table td {\n    padding: 12px 15px;\n    font-size: 14px;\n    color: #333;\n  }\n\n  /* Responsive Design */\n  @media (max-width: 768px) {\n    .modern-table th,\n    .modern-table td {\n      padding: 10px;\n      font-size: 12px;\n    }\n\n    .modern-table-container {\n      box-shadow: none;\n      border-radius: 0;\n    }\n  }\n</style>\n\n<div class=\"modern-table-container\">\n  <table class=\"modern-table\">\n    <thead>\n      <tr>\n        <th>PART</th>\n        <th>ORIGINAL</th>\n        <th>PULLED</th>\n        <th>REFURBISHED</th>\n        <th>OEM</th>\n        <th>OLED-SOFT</th>\n        <th>OLED-HARD</th>\n        <th>IN-CELL</th>\n        <th>COMPATIBLE</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>Front Glass</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n      </tr>\n      <tr>\n        <td>Polarizer</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n      </tr>\n      <tr>\n        <td>Touch / Digitizer</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n      </tr>\n      <tr>\n        <td>Display</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n      </tr>\n      <tr>\n        <td>Backlight</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Generic</td>\n        <td>n/a</td>\n        <td>n/a</td>\n        <td>Generic</td>\n        <td>Generic</td>\n      </tr>\n      <tr>\n        <td>Display Flex Cable</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Original</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n        <td>Generic</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom_liquid_tGxhqK"
   ]
 }
