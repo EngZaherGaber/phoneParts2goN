@@ -392,7 +392,7 @@
       <div class="field-row">
         <div class="field">
           <select
-            name="{{customer.metafields.custom.country}}"
+            name="customer[addresses][country]"
             id="RegisterForm-Country"
             required>
             <option value="">Select Country</option>
@@ -405,7 +405,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[note][city]"
+            name="customer[addresses][city]"
             id="RegisterForm-City"
             placeholder="City"
             required>
@@ -414,7 +414,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[note][zip_code]"
+            name="customer[addresses][zip]"
             id="RegisterForm-ZipCode"
             placeholder="Zip Code"
             required>
@@ -425,7 +425,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[note][address1]"
+            name="customer[addresses][address1]"
             id="RegisterForm-Address1"
             placeholder="Address 1"
             required>
@@ -434,7 +434,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[note][address2]"
+            name="customer[addresses][address2]"
             id="RegisterForm-Address2"
             placeholder="Address 2"
             required>
@@ -445,7 +445,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[note][company]"
+            name="customer[addresses][company]"
             id="RegisterForm-Company"
             placeholder="Company"
             required>
@@ -477,7 +477,7 @@
           <input
             style="padding: 20px;"
             type="file"
-            name="customer[note][business_license]"
+            name="customer[metafield][business_license]"
             id="RegisterForm-BusinessLicense">
           <label for="RegisterForm-BusinessLicense">Business License / Extract from the Commercial Register</label>
         </div>
