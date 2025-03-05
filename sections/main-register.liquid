@@ -395,7 +395,7 @@
             {% if form.addresses.country %}
             value="{{ form.addresses.country }}"
             {% endif %}
-            name="customer[addresses][country]"
+            name="address[country]"
             id="RegisterForm-Country"
             required>
             <option value="">Select Country</option>
@@ -408,7 +408,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[addresses][city]"
+            name="address[city]"
             id="RegisterForm-City"
             placeholder="City"
             required>
@@ -417,7 +417,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[addresses][zip]"
+            name="address[zip]"
             id="RegisterForm-ZipCode"
             placeholder="Zip Code"
             required>
@@ -428,7 +428,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[addresses][address1]"
+            name="address[address1]"
             id="RegisterForm-Address1"
             placeholder="Address 1"
             required>
@@ -437,7 +437,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[addresses][address2]"
+            name="address[address2]"
             id="RegisterForm-Address2"
             placeholder="Address 2"
             required>
@@ -448,7 +448,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[addresses][company]"
+            name="address[company]"
             id="RegisterForm-Company"
             placeholder="Company"
             required>
@@ -464,7 +464,7 @@
         <div class="field">
           <input
             type="text"
-            name="customer[note][vat_number]"
+            name="custom[vat_number]"
             id="RegisterForm-VATNumber"
             placeholder="VAT Number">
           <label for="RegisterForm-VATNumber">VAT Number</label>
@@ -480,7 +480,7 @@
           <input
             style="padding: 20px;"
             type="file"
-            name="customer[metafield][business_license]"
+            name="custom[business_license]"
             id="RegisterForm-BusinessLicense">
           <label for="RegisterForm-BusinessLicense">Business License / Extract from the Commercial Register</label>
         </div>
@@ -494,7 +494,7 @@
         <div class="field-row">
           <input
             type="checkbox"
-            name="customer[note][repair][]"
+            name="custom[repair][]"
             value="Electronics"
             id="repair-electronics">
           <label for="repair-electronics">Electronics</label>
@@ -502,7 +502,7 @@
         <div class="field-row">
           <input
             type="checkbox"
-            name="customer[note][repair][]"
+            name="custom[repair][]"
             value="Appliances"
             id="repair-appliances">
           <label for="repair-appliances">Appliances</label>
@@ -510,7 +510,7 @@
         <div class="field-row">
           <input
             type="checkbox"
-            name="customer[note][repair][]"
+            name="custom[repair][]"
             value="Furniture"
             id="repair-furniture">
           <label for="repair-furniture">Furniture</label>
@@ -525,7 +525,7 @@
         <div class="field-row">
           <input
             type="checkbox"
-            name="customer[note][our_services][]"
+            name="custom[our_services][]"
             value="Repair"
             id="service-repair">
           <label for="service-repair">Repair</label>
@@ -533,7 +533,7 @@
         <div class="field-row">
           <input
             type="checkbox"
-            name="customer[note][services][]"
+            name="custom[services][]"
             value="Maintenance"
             id="service-maintenance">
           <label for="service-maintenance">Maintenance</label>
@@ -541,7 +541,7 @@
         <div class="field-row">
           <input
             type="checkbox"
-            name="customer[note][services][]"
+            name="custom[services][]"
             value="Installation"
             id="service-installation">
           <label for="service-installation">Installation</label>
@@ -556,7 +556,7 @@
         <div class="field">
           <input
             type="tel"
-            name="customer[note][phone]"
+            name="custom[phone]"
             id="RegisterForm-Phone"
             placeholder="Phone"
             required>
@@ -565,7 +565,7 @@
         <div class="field">
           <input
             type="tel"
-            name="customer[note][whatsapp]"
+            name="custom[whatsapp]"
             id="RegisterForm-WhatsAppNumber"
             placeholder="WhatsApp Number">
           <label for="RegisterForm-WhatsAppNumber">WhatsApp Number</label>
@@ -575,7 +575,7 @@
         <div class="field">
           <input
             type="url"
-            name="customer[note][website]"
+            name="custom[website]"
             id="RegisterForm-Website"
             placeholder="Website">
           <label for="RegisterForm-Website">Website</label>
@@ -585,7 +585,7 @@
         <div class="field">
           <input
             type="url"
-            name="customer[note][facebook]"
+            name="custom[facebook]"
             id="RegisterForm-Facebook"
             placeholder="Facebook">
           <label for="RegisterForm-Facebook">Facebook</label>
@@ -595,7 +595,7 @@
         <div class="field">
           <input
             type="url"
-            name="customer[note][instagram]"
+            name="custom[instagram]"
             id="RegisterForm-Instagram"
             placeholder="Instagram">
           <label for="RegisterForm-Instagram">Instagram</label>
@@ -605,7 +605,7 @@
         <div class="field">
           <input
             type="url"
-            name="customer[note][linkedin]"
+            name="custom[linkedin]"
             id="RegisterForm-LinkedIn"
             placeholder="LinkedIn">
           <label for="RegisterForm-LinkedIn">LinkedIn</label>
