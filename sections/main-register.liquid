@@ -392,6 +392,9 @@
       <div class="field-row">
         <div class="field">
           <select
+            {% if form.addresses.country %}
+            value="{{ form.addresses.country }}"
+            {% endif %}
             name="customer[addresses][country]"
             id="RegisterForm-Country"
             required>
