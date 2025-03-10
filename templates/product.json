@@ -137,7 +137,7 @@
         "columns_desktop": 5,
         "color_scheme": "scheme-4",
         "image_ratio": "square",
-        "image_shape": "default",
+        "image_shape": "round",
         "show_secondary_image": true,
         "show_vendor": true,
         "show_rating": true,

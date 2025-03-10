@@ -17,7 +17,14 @@
         "link_list_KeYCLN": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick-Links",
+            "heading": "PhoneParts2GO",
+            "menu": "footer"
+          }
+        },
+        "link_list_iAmAtk": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
             "menu": "footer"
           }
         },
@@ -31,6 +38,7 @@
       },
       "block_order": [
         "link_list_KeYCLN",
+        "link_list_iAmAtk",
         "text_Tiqa9f"
       ],
       "settings": {
