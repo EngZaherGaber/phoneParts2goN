@@ -8,6 +8,7 @@
 {%- style -%}
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    /* background:var(--grad); */
   }
 
   .section-{{ section.id }}-padding {
@@ -26,8 +27,10 @@
     }
   }
 {%- endstyle -%}
-
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<svg id="wave" style="transform:rotate(0deg); transition: 0.3s;" viewBox="0 0 1440 330" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path style="transform:translate(0, 0px); opacity:1" fill="rgba(139, 214, 218, 1)" d="M0,99L20,82.5C40,66,80,33,120,55C160,77,200,154,240,203.5C280,253,320,275,360,253C400,231,440,165,480,154C520,143,560,187,600,187C640,187,680,143,720,121C760,99,800,99,840,93.5C880,88,920,77,960,88C1000,99,1040,132,1080,148.5C1120,165,1160,165,1200,137.5C1240,110,1280,55,1320,33C1360,11,1400,22,1440,49.5C1480,77,1520,121,1560,121C1600,121,1640,77,1680,77C1720,77,1760,121,1800,159.5C1840,198,1880,231,1920,209C1960,187,2000,110,2040,104.5C2080,99,2120,165,2160,198C2200,231,2240,231,2280,225.5C2320,220,2360,209,2400,181.5C2440,154,2480,110,2520,126.5C2560,143,2600,220,2640,220C2680,220,2720,143,2760,132C2800,121,2840,176,2860,203.5L2880,231L2880,330L2860,330C2840,330,2800,330,2760,330C2720,330,2680,330,2640,330C2600,330,2560,330,2520,330C2480,330,2440,330,2400,330C2360,330,2320,330,2280,330C2240,330,2200,330,2160,330C2120,330,2080,330,2040,330C2000,330,1960,330,1920,330C1880,330,1840,330,1800,330C1760,330,1720,330,1680,330C1640,330,1600,330,1560,330C1520,330,1480,330,1440,330C1400,330,1360,330,1320,330C1280,330,1240,330,1200,330C1160,330,1120,330,1080,330C1040,330,1000,330,960,330C920,330,880,330,840,330C800,330,760,330,720,330C680,330,640,330,600,330C560,330,520,330,480,330C440,330,400,330,360,330C320,330,280,330,240,330C200,330,160,330,120,330C80,330,40,330,20,330L0,330Z"></path>
+</svg>
+<footer style="margin-top:-1rem;background:#8bd6da" class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -302,8 +305,8 @@
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
-        {%- if section.settings.show_policy -%}
+        <small class="copyright__content"></small>
+        {% comment %} {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
               {%- if policy != blank -%}
@@ -315,7 +318,7 @@
               {%- endif -%}
             {%- endfor -%}
           </ul>
-        {%- endif -%}
+        {%- endif -%} {% endcomment %}
       </div>
     </div>
   </div>

@@ -32,7 +32,10 @@
   aria-label="{{ section.settings.accessibility_info | escape }}"
 >
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
-    <div class="slideshow__controls slideshow__controls--top slider-buttons{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
+    <div
+      class="slideshow__controls slideshow__controls--top slider-buttons{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}"
+      style="border:0;"
+    >
       <button
         type="button"
         class="slider-button slider-button--prev"
@@ -80,20 +83,22 @@
         </span>
       </button>
 
-      {%- if section.settings.auto_rotate -%}
-        <button
-          type="button"
-          class="slideshow__autoplay slider-button{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
-          aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
-        >
-          <span class="svg-wrapper">
-            {{- 'icon-pause.svg' | inline_asset_content -}}
-          </span>
-          <span class="svg-wrapper">
-            {{- 'icon-play.svg' | inline_asset_content -}}
-          </span>
-        </button>
-      {%- endif -%}
+      {% comment %}
+        {%- if section.settings.auto_rotate -%}
+          <button
+            type="button"
+            class="slideshow__autoplay slider-button{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
+            aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-pause.svg' | inline_asset_content -}}
+            </span>
+            <span class="svg-wrapper">
+              {{- 'icon-play.svg' | inline_asset_content -}}
+            </span>
+          </button>
+        {%- endif -%}
+      {% endcomment %}
     </div>
   {%- endif -%}
 

@@ -261,8 +261,8 @@
             {% render block %}
         {%- endcase -%}
       {%- endfor -%}
-
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      {% if customer %}
+      <a href="{% if customer %}{{ routes.cart_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
             <span class="svg-wrapper">{{'icon-cart-empty.svg' | inline_asset_content }}</span>
           {% else %}
@@ -278,6 +278,7 @@
           </div>
         {%- endif -%}
       </a>
+    {%  endif %}
     </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
@@ -340,11 +341,13 @@
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
-      const viewportHeight = window.innerHeight;
+      const viewportHeight = window.innerHeight / 2;
       if (scrollTop >= viewportHeight) {
-        this.header.style.background = 'linear-gradient(170deg, rgb(11, 15, 52) 40%, rgba(32, 238, 181, 0.59) 105%)';
+        this.header.style.background = 'linear-gradient(45deg, rgb(11, 15, 52) 27%,  #20eeb596 124%)';
+        this.header.style.boxShadow  = '0px 0px 5px 0px #251d50'
       } else {
         this.header.style.background = 'linear-gradient(180deg, #4d4d4d, #8d8d8d7a 52.08%, #85858500)';
+        this.header.style.boxShadow  = 'none'
       }
       if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
         this.header.classList.add('scrolled-past-header');

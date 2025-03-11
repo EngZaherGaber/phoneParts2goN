@@ -12,7 +12,12 @@
   --dark-color: #251d50;
   --purple-color: #8c8cb4;
   --green-color: #16c193;
-  --grad:linear-gradient(45deg, rgb(11, 15, 52) 27%,  #20eeb596 124%);
+  --grad: linear-gradient(135deg, rgb(11, 15, 52), rgb(59 151 159));
+  --newWhite: #ebedec;
+  --newDark: #18192d;
+  --darkGreen: #38979e;
+  --lightGreen: #c7f1f0;
+  --newDarkGrad: linear-gradient();
 }
 
 .product-card-wrapper .card,
@@ -92,12 +97,83 @@ body {
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  background: linear-gradient(
+    90deg,
+    rgb(139 214 218),
+    rgb(166 236 208)
+  ) !important;
   /* overflow-y: scroll; Ensure scrolling is enabled */
   /* overflow-y: hidden; */
 }
+
 main {
   position: relative;
 }
+.no-cart {
+  display: inline-flex; /* Use inline-flex for better alignment */
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  width: 100%; /* Adjust width to fit content */
+  padding: 0px 24px; /* Slightly larger padding for better clickability */
+  font-size: 16px; /* Adjust font size */
+  color: #fff !important;
+  /* White text for contrast */
+  text-decoration: none; /* Remove underline */
+  text-transform: uppercase; /* Uppercase text for a professional look */
+  border-radius: 20px; /* Rounded corners */
+  background: linear-gradient(
+    270deg,
+    #3ee9a5,
+    #45d5dc
+  ); /* Gradient background */
+  background-size: 200% 200%; /* Larger background for animation */
+  background-position: 0% 0%; /* Initial background position */
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: relative; /* For pseudo-element effects */
+  overflow: hidden; /* Hide overflow for pseudo-element */
+}
+
+.no-cart:hover {
+  background-position: 100% 100%; /* Animate gradient on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.no-cart:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+/* Add a pseudo-element for a glossy overlay effect */
+.no-cart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0) 50%
+  ); /* Glossy overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.no-cart:hover::after {
+  opacity: 1; /* Show glossy overlay on hover */
+}
+
+/* Style for the SVG icon */
+.no-cart > .svg-wrapper {
+  display: flex;
+  align-items: center;
+  /* width: 4.4rem; */
+  height: 4.4rem;
+  margin-right: 8px; /* Add spacing between icon and text */
+}
+
 .zah-overlay {
   background: var(--gray-color-tr) !important;
 }
@@ -108,12 +184,7 @@ main {
 }
 
 .box-sh {
-  background: linear-gradient(
-    180deg,
-    #4d4d4d,
-    #8d8d8d7a 52.08%,
-    #85858500
-  ) !important;
+  background: transparent !important;
 }
 .page-width {
   max-width: var(--page-width);
@@ -300,7 +371,7 @@ h5,
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
-  text-shadow: 0px 1px 2px var(--dark-color);
+  text-shadow: 0px 1px 2px var(--newDark);
   letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
   color: rgb(var(--color-foreground));
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
@@ -2650,7 +2721,7 @@ input[type="checkbox"] {
   width: 100%;
   display: block;
   position: absolute;
-  background: rgba(var(--dark-color), 0.5);
+  background: rgba(var(--newDark), 0.5);
 }
 
 .header__icon--account shop-user-avatar {
